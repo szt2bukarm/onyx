@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "HaasGrotText-Roman";
+  src: url("/fonts/NeueHaasGrotText-55Roman.otf");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "HaasGrotText-Bold";
+  src: url("/fonts/NeueHaasGrotText-75Bold.otf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "HaasGrotText-Medium";
+  src: url("/fonts/NeueHaasGrotText-65Medium.otf");
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  display: block;
+  background-color: #000;
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  display: block;
+  background-color: #FF7770;
+  border-radius: 0px;
+}
+
+@theme {
+  /* font */
+  --font-regular: "HaasGrotText-Roman";
+  --font-bold: "HaasGrotText-Bold";
+  --font-medium: "HaasGrotText-Medium";
+
+  /* breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-xxl: 1600px;
+
+  /* font sizes */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-h6: 20px;
+  --text-h5: 24px;
+  --text-h4: 32px;
+  --text-h3: 48px;
+  --text-h2: 56px;
+  --text-h1: 80px;
+
+  /* line heights */
+  --leading-sm: 20px;
+  --leading-md: 24px;
+  --leading-body: 24px;
+  --leading-lg: 32px;
+  --leading-h6: 24px;
+  --leading-h5: 32px;
+  --leading-h4: 40px;
+  --leading-h3: 52px;
+  --leading-h2: 64px;
+  --leading-h1: 88px;
+
+  /* colors */
+  --color-onyx-100: #FFEDEC;
+  --color-onyx-200: #FFD2CF;
+  --color-onyx-300: #FFA49F;
+  --color-onyx-400: #FF7770;
+  --color-onyx-500: #FF4A40;
+  --color-onyx-600: #BF3830;
+  --color-onyx-700: #802520;
+  --color-onyx-800: #401310;
+
+  /* Cream colors */
+  --color-cream-100: #FDFcFC;
+  --color-cream-200: #FBF9F7;
+  --color-cream-300: #F6F3EF;
+  --color-cream-400: #F1ECE7;
+  --color-cream-500: #E6DED7;
+  --color-cream-600: #B2ACA7;
+  --color-cream-700: #777370;
+  --color-cream-800: #181716;
+
+  --color-creambg: #eee6df;
+
+  /* grays */
+  --color-neutral-100: #DEDEDE;
+  --color-neutral-300: #8B8B8B;
+  --color-neutral-700: #1B1B1B;
+  --color-neutral-800: #121212;
+}
+
+
