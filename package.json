@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npm install @studio-freight/react-lenis --force"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
