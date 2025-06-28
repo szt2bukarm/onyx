@@ -1,6 +1,9 @@
+"use client"
 import PrivacyCard from "./PrivacyCard"
 import PrivacyVideo from "./PrivacyVideo"
 import PrivacyVideoInline from "./PrivacyVideoInline"
+import Heading from "../common/Heading";
+
 
 const cards = [
     {
@@ -18,10 +21,11 @@ const cards = [
 ]
 
 export default function Privacy() {
+
     return (
         <>
         <div className="px-[20px] sm:px-[80px] py-[120px] bg-white ">
-            <h2 className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[48px]">Introducing your AI privacy Wall</h2>
+            <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[48px]">Introducing your AI privacy Wall</Heading>
             <div className="flex flex-col lg:flex-row gap-[16px] min-h-auto md:min-h-[640px] mb-[48px]">
                 {cards.map((card, index) => (
                     <PrivacyCard key={index} header={card.header} subheader={card.subheader} text={card.text} button={card.button} />

@@ -1,4 +1,7 @@
+"use client"
 import TestimonialCard from "../common/TestimonialCard"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 
 const data = [
     {
@@ -22,8 +25,12 @@ const data = [
 ]
 
 export default function HeroTestimonial() {
+    useGSAP(() => {
+        gsap.set("[data-gsap='hero-testimonial']", {opacity: 0})
+    },[])
+
     return (
-        <div className="xl:grid xl:grid-cols-2 xl:grid-rows-2 xl:w-[700px] xl:h-[650px] xl:ml-auto lg:flex">
+        <div data-gsap="hero-testimonial" className="xl:grid xl:grid-cols-2 xl:grid-rows-2 xxl:w-[700px] xxl:h-[650px] xl:ml-auto lg:flex">
             <div></div>
             {data.map((item,index) => (
                 <TestimonialCard key={index} transform={true} text={item.text} name={item.name} image={item.image} role={item.role} index={index}/>

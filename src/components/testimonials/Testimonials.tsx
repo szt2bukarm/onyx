@@ -1,3 +1,4 @@
+import Heading from "../common/Heading"
 import TestimonialCard from "../common/TestimonialCard"
 
 const data = [
@@ -24,7 +25,7 @@ const data = [
 export default function Testiomonials() {
     return (
         <div className="px-[20px] sm:px-[80px] py-[120px] bg-neutral-800">
-            <h2 className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white mb-[48px]">What our users say</h2>
+            <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white mb-[48px]">What our users say</Heading>
 
             <div className="flex flex-col lg:flex-row min-h-[290px] mb-[24px]">
                 {data.map((item,index) => (

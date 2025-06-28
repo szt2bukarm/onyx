@@ -1,6 +1,6 @@
 export default function ExploreCard({icon,header,text,button} : {icon: string, header: string, text: string, button: string}) {
     return (
-        <div className="bg-creambg p-[48px] flex flex-col w-full">
+        <div className="bg-creambg p-[24px] sm:p-[48px] flex flex-col w-full">
             <img src="iconplaceholder.png" alt="icon" className="w-[125px] h-[125px] mb-5" />
             <div className="font-regular mt-auto">
                 <div>

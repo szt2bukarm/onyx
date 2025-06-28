@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import SmoothScroll from "./SmoothScroll";
+// import CustomEase from "gsap/CustomEase";
+// import gsap from "gsap";
+// gsap.registerPlugin(CustomEase);
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,11 +17,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body>
         <Nav />
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );
