@@ -36,7 +36,10 @@ export default function Heading({className,children}: {className: string, childr
             }
         })
       
+        let lastWidth = window.innerWidth;
         const handleResize = () => {
+            lastWidth = window.innerWidth;
+            if (lastWidth === window.innerWidth) return;
           split.revert(); 
           requestAnimationFrame(() => {
             trigger.refresh();

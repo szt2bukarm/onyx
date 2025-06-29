@@ -25,7 +25,7 @@ export default function FooterLogo() {
                 })
             }
         })
-
+        
         const handleResize = () => {
             trigger.refresh();
         }
