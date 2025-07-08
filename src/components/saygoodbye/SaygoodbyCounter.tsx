@@ -3,9 +3,13 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import ScrollTrigger from "gsap/dist/ScrollTrigger"
 import { useEffect, useState } from "react";
+import useOperatingSystem from "../util/useOperatingSystem";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SaygoodbyCounter() {
+    const os = useOperatingSystem();
+
+    const padding = os === "Windows" ? "pt-0": "pt-3";
 
     useGSAP(() => {
         let trigger = ScrollTrigger.create({
@@ -39,7 +43,7 @@ export default function SaygoodbyCounter() {
             ease: "power3.out",
         })
 
-        const numberHeight = document.querySelector(`[data-gsap='saygoodbye-counter-${el}']`)?.children[0].getBoundingClientRect().height
+        const numberHeight = document.querySelector(`[data-gsap='saygoodbye-counter-${el}']`)?.children[0].getBoundingClientRect().height 
         gsap.to(`[data-gsap='saygoodbye-counter-${el}']`, {
             y: -numberHeight*9,
             ease: "linear",
@@ -71,8 +75,8 @@ export default function SaygoodbyCounter() {
     }, [])
 
     return (
-        <div data-gsap="saygoodbye" className="flex overflow-hidden font-regular text-[45vw] leading-[45vw] md:text-[320px] md:leading-[250px] text-white mb-10 xl:mb-0">
-            <div className="flex overflow-hidden max-h-[45vw] md:max-h-[250px] pt-3">
+        <div data-gsap="saygoodbye" className="flex overflow-hidden font-regular text-[45vw] md:text-[320px] text-white mb-10 xl:mb-0 leading-[45vw] md:leading-[250px]">
+            <div className={`flex overflow-hidden max-h-[45vw] md:max-h-[250px] ${padding}`}>
             <div data-gsap="saygoodbye-counter-1" className="flex flex-col">
                 <p>9</p>
                 <p>1</p>
