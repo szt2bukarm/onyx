@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Video({name,role,video,showWatchVideo,buttonColor,buttonSize,children} : {name: string, role: string, video: string, showWatchVideo: boolean, buttonColor: string, buttonSize: string, children?: React.ReactNode}) {
 
     return (
-        <div className={`flex flex-col h-full w-full bg-[url('/videoplaceholder.png')] bg-cover bg-center relative p-[20px] ${showWatchVideo ? 'items-center md:pb-[48px] md:px-[80px] pt-[120px]' : 'md:p-[40px] items-end'}`}>
+        <div className={`flex flex-col min-h-full w-full bg-[url('/videoplaceholder.png')] bg-cover bg-center relative p-[20px] ${showWatchVideo ? 'items-center md:pb-[48px] md:px-[80px] pt-[120px]' : 'md:p-[40px] items-end'}`}>
             {children}
             <div className={`w-full flex justify-between mt-auto ${showWatchVideo ? 'items-center' : 'items-end'}`}>
                 <div className="flex items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0 md:top-0 md:left-0 md:relative">

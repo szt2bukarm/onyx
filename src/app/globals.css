@@ -18,6 +18,7 @@
 html {
   overflow-x: hidden;
   font-family: HaasGrotText-Roman;
+  background-color: #121212;
 }
 
 ::-webkit-scrollbar {
@@ -68,7 +69,7 @@ html {
   --leading-h5: 32px;
   --leading-h4: 40px;
   --leading-h3: 52px;
-  --leading-h2: 64px;
+  --leading-h2: 68px;
   --leading-h1: 88px;
 
   /* colors */
@@ -98,6 +99,21 @@ html {
   --color-neutral-300: #8B8B8B;
   --color-neutral-700: #1B1B1B;
   --color-neutral-800: #121212;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none !important;
+}
+
+::view-transition-group(root) {
+  z-index: auto !important;
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+  will-change: transform, opacity;
+  z-index: -1;
 }
 
 

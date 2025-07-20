@@ -3,8 +3,11 @@ import { useGSAP } from "@gsap/react";
 import CTAButton from "./common/CTAButton";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import TransitionLink from "./TransitionLink";
 
 export default function Nav() {
+    const router = useRouter();
     const [open, setOpen] = useState(false);
 
     const handleToggle = () => {
@@ -52,9 +55,15 @@ export default function Nav() {
 
     return (
         <>
-        <nav data-gsap="nav" className="z-100 bg-neutral-800 w-screen fixed">
+        <nav data-gsap="nav" className="z-100 bg-neutral-800 w-screen fixed" style={{viewTransitionName: "nav"}}>
             <div className="relative w-full flex justify-between items-center md:px-[80px] px-[20px] py-[24px]">
-            <img src="logo.svg" alt="logo" className="z-1 w-[90px] md:w-[160px]"/>
+
+            <div className="z-100">
+            <TransitionLink href={"/"}>
+            <img src="logo.svg" alt="logo" className="z-1 w-[90px] md:w-[160px] cursor-pointer"/>
+            </TransitionLink>
+            </div>
+
             <div className="z-1 hidden md:flex items-center">
                 <div className="space-x-[8px] mr-[32px]">
                     <a className="cursor-pointer px-[8px] py-[16px] text-white hover:opacity-50 transition duration-150">RESEARCH</a>

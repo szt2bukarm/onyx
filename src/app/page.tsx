@@ -1,13 +1,13 @@
-import Encrypt from "@/components/encrypt/Encrypt";
-import Explore from "@/components/explore/Explore";
+import Encrypt from "@/components/landing/encrypt/Encrypt";
+import Explore from "@/components/landing/explore/Explore";
 import Footer from "@/components/footer/Footer";
-import Hero from "@/components/hero/Hero";
-import Highlights from "@/components/highlights/Highlights";
-import Privacy from "@/components/privacy/Privacy";
-import Saygoodbye from "@/components/saygoodbye/Saygoodbye";
-import Testiomonials from "@/components/testimonials/Testimonials";
-import TrustedBy from "@/components/trustedby/TrustedBy";
-import ZeroSwitch from "@/components/zeroswitch/ZeroSwitch";
+import Hero from "@/components/landing/hero/Hero";
+import Highlights from "@/components/landing/highlights/Highlights";
+import Privacy from "@/components/landing/privacy/Privacy";
+import Saygoodbye from "@/components/landing/saygoodbye/Saygoodbye";
+import Testiomonials from "@/components/landing/testimonials/Testimonials";
+import TrustedBy from "@/components/landing/trustedby/TrustedBy";
+import ZeroSwitch from "@/components/landing/zeroswitch/ZeroSwitch";
 import Image from "next/image";
 
 export default function Home() {

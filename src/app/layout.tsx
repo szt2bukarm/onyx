@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import SmoothScroll from "./SmoothScroll";
+import { ViewTransitions } from "next-view-transitions";
 // import CustomEase from "gsap/CustomEase";
 // import gsap from "gsap";
 // gsap.registerPlugin(CustomEase);
@@ -19,6 +20,7 @@ export default function RootLayout({
 }>) {
 
   return (
+    <ViewTransitions>
     <html lang="en">
       <body>
         <Nav />
@@ -27,5 +29,6 @@ export default function RootLayout({
         </SmoothScroll>
       </body>
     </html>
+    </ViewTransitions>
   );
 }
