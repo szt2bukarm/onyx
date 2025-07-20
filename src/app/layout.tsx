@@ -22,6 +22,27 @@ export default function RootLayout({
   return (
     <ViewTransitions>
     <html lang="en">
+    <link
+        rel="preload"
+        href="fonts/NeueHaasGrotText-55Roman.otf"
+        as="font"
+        type="font/otf"
+        crossOrigin="anonymous"
+      />
+    <link
+        rel="preload"
+        href="fonts/NeueHaasGrotText-65Medium.otf"
+        as="font"
+        type="font/otf"
+        crossOrigin="anonymous"
+      />
+    <link
+        rel="preload"
+        href="fonts/NeueHaasGrotText-75Bold.otf"
+        as="font"
+        type="font/otf"
+        crossOrigin="anonymous"
+      />
       <body>
         <Nav />
         <SmoothScroll>

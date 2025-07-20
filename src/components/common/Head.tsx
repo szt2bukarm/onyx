@@ -27,8 +27,10 @@ export default function Head({label,subtext,children} : {label: string, subtext:
         gsap.to(labelRef.current, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.1)" })
         gsap.to(subtextRef.current, { opacity: 1, duration: 0.1,delay:1 })
 
-
+        let lastWidth = window.innerWidth;
         const handleResize = () => {
+            if (lastWidth == window.innerWidth) return;
+            lastWidth = window.innerWidth;
             split.revert(); 
             requestAnimationFrame(() => {
               split = new SplitText("[data-gsap='hero-text']", { type: "lines" });
@@ -55,11 +57,11 @@ export default function Head({label,subtext,children} : {label: string, subtext:
             </div>
 
             {/* text */}
-            <div ref={textRef} className="flex flex-col font-regular text-h3 leading-h3 md:text-h2 md:leading-h2 xl:text-[3vw] xl:leading-[3.5vw] text-white tracking-[-1px]">{children}</div>
+            <div ref={textRef} className="flex flex-col font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 md:text-h2 md:leading-h2 xl:text-[3vw] xl:leading-[3.5vw] text-white tracking-[-1px]">{children}</div>
         </div>
 
         {/* right */}
-        <p ref={subtextRef} className="font-regular text-sm text-neutral-100 mt-auto">{subtext}</p>
+        <p ref={subtextRef} className="font-regular text-md leading-md xl:text-sm text-neutral-100 mt-auto">{subtext}</p>
 
         </div>
     )
