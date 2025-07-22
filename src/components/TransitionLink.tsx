@@ -1,8 +1,10 @@
 "use client"
 import Link from "next/link";
 import { useTransitionRouter } from "next-view-transitions";
-import navStyles from './Nav/nav.module.scss'
 import { usePathname } from "next/navigation";
+import gsap from 'gsap'
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function TransitionLink({ href, children, className }) {
     const Router = useTransitionRouter();
@@ -53,7 +55,10 @@ export default function TransitionLink({ href, children, className }) {
                 fill: "forwards",
                 pseudoElement: "::view-transition-new(root)",
                 delay: 300, 
-            });    
+            }); 
+            setTimeout(() => {
+                ScrollTrigger.refresh();
+            }, 1500);  
     };
     
     return (

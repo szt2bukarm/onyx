@@ -1,10 +1,11 @@
 import Head from "@/components/common/Head";
 import Footer from "@/components/footer/Footer";
-import EarlyAccessForm from "@/components/veil/earlyaccessform/EarlyAccessForm";
-import FeatureList from "@/components/veil/featurelist/FeatureList";
+import EarlyAccessForm from "@/components/common/joinonyx/EarlyAccessForm";
+import FeatureList from "@/components/veil/featurelistveil/FeatureListVeil";
 import Guardrails from "@/components/veil/guardrails/Guardrails";
 import Protects from "@/components/veil/protects/protects";
-import SecureAI from "@/components/veil/secureai/SecureAI";
+import SecureAI from "@/components/common/joinonyx/SecureAI";
+import JoinOnyx from "@/components/common/joinonyx/JoinOnyx";
 
 export default function Page() {
     return (
@@ -18,10 +19,7 @@ export default function Page() {
             <FeatureList />
             <Guardrails />
 
-            <div className="px-[20px] sm:pl-[80px] sm:pr-[80px] xl:pr-[128px] bg-neutral-800 flex flex-col xl:flex-row justify-between">
-                <SecureAI />
-                <EarlyAccessForm />
-            </div>
+            <JoinOnyx />
         </main>
 
         <div className="pt-[80px] px-[20px] sm:px-[80px] bg-neutral-800">

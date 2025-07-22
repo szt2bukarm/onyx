@@ -97,6 +97,9 @@ html {
   /* grays */
   --color-neutral-100: #DEDEDE;
   --color-neutral-300: #8B8B8B;
+  --color-neutral-400: #5E5E5E;
+  --color-neutral-500: #333333;
+  --color-neutral-600: #2E2E2E;
   --color-neutral-700: #1B1B1B;
   --color-neutral-800: #121212;
 }
@@ -116,4 +119,7 @@ html {
   z-index: -1;
 }
 
-
+::selection {
+  background-color: var(--color-onyx-500);
+  color: #FFF;
+}
