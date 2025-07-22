@@ -1,4 +1,4 @@
-import CTAButton from "@/components/common/CTAButton";
+import CTAButton from "@/components/common/Button";
 import Heading from "@/components/common/Heading";
 
 export default function EarlyAccessForm() {

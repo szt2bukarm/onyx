@@ -1,6 +1,6 @@
 "use client"
 import { useGSAP } from "@gsap/react";
-import CTAButton from "./common/CTAButton";
+import CTAButton from "./common/Button";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";

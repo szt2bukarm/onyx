@@ -1,5 +1,5 @@
 "use client"
-import CTAButton from "../../common/CTAButton";
+import CTAButton from "../../common/Button";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitText from "gsap/src/SplitText";
