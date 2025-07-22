@@ -29,7 +29,7 @@ export default function WhyPrivacy() {
 
                     <div className="flex flex-col gap-[8px] flex-1">
                         <RiskCard text="Beyond Standard TLS:" subtext="HTTPS/TLS protects data in transit but not during point of inference." />
-                        <RiskCard text="Host-Level & Administrative Threats:" subtext="HTTPS/TLS protects data in transit but not during point of inference." />
+                        <RiskCard text="Host-Level & Administrative Threats:" subtext="Host-level compromises or admin abuse can occur on the server-side plaintext steps at any time." />
                         <RiskCard text="IAM & VPN Vulnerabilities:" subtext="Attacks that rely on privileged credentials or misconfigurations can happen at any time." />
                         <RiskCard text="Side-Channel Attacks:" subtext="Advanced cryptographic side-channel attacks that rely on analyzing data in memory can happen any time." />
                     </div>
