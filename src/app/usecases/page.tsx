@@ -8,6 +8,8 @@ import { useGSAP } from "@gsap/react";
 import { useLenis } from '@studio-freight/react-lenis'
 import JoinOnyx from "@/components/common/joinonyx/JoinOnyx";
 import Footer from "@/components/footer/Footer";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
     {
@@ -443,6 +445,11 @@ export default function Page() {
                 duration: 0.3,
                 ease: "back.out(1.5)",
                 stagger: 0.03,
+                onComplete: () => {
+                    requestAnimationFrame(() => {
+                        ScrollTrigger.refresh();
+                    })
+                }
             })
         } catch (error) {
             
@@ -519,7 +526,10 @@ export default function Page() {
 
             <JoinOnyx />
         </main>
+
+        <div key={selectedTag}>
         <Footer />
+        </div>
         </>
     )
 }
