@@ -61,7 +61,9 @@ export default function Head({label,subtext,children} : {label: string, subtext:
         </div>
 
         {/* right */}
+        {subtext && (
         <p ref={subtextRef} className="font-regular text-md leading-md xl:text-sm text-neutral-100 mt-auto">{subtext}</p>
+        )}
 
         </div>
     )

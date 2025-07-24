@@ -15,7 +15,6 @@ export default function FooterLogo() {
             trigger: "[data-gsap='footer-logo-o']",
             start: "-500px 70%",
             end: "-500px 70%",
-            markers: true,
             onEnter: () => {
                 gsap.to("[data-gsap='footer-logo-tm']", {opacity:1, duration: 0.1,delay:0.8})
                 gsap.to("[data-gsap='footer-logo-o'], [data-gsap='footer-logo-n'], [data-gsap='footer-logo-y'], [data-gsap='footer-logo-x'], [data-gsap='footer-logo-tm']", {
