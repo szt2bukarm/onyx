@@ -8,6 +8,6 @@ export default function Award({placement,text,subtext,image}: {placement: string
         //     <p className="font-regular text-[0.7vw] leading-sm text-[#787878] text-center" dangerouslySetInnerHTML={{__html: subtext}}></p>
         // </div>
 
-        <img src={`awards/${image}`} alt={`award: ${placement} - ${text} - ${subtext}`} className="w-[40%] sm:w-[205px] xl:w-[11vw] xl:h-[6.5vw]"></img>
+        <img src={`awards/${image}`} alt={`award: ${placement} - ${text} - ${subtext}`} className="w-[40%] sm:w-[205px] xl:w-auto xl:h-[6.5vw]"></img>
     )
 }
