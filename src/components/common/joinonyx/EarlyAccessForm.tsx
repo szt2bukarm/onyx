@@ -1,5 +1,4 @@
-import CTAButton from "@/components/common/Button";
-import Heading from "@/components/common/Heading";
+import Button from "@/components/common/Button";
 
 export default function EarlyAccessForm() {
     return (
@@ -67,7 +66,7 @@ export default function EarlyAccessForm() {
                 </div>
            </div>
 
-           <CTAButton variant="primary">REQUEST A DEMO</CTAButton>
+           <Button variant="primary">REQUEST A DEMO</Button>
         </form>
     )
 }

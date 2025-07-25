@@ -476,10 +476,9 @@ export default function Page() {
             </Head>
 
             <div className="px-[20px] xl:px-[144px] pt-[120px]">
-                {/* Move padding to heading container */}
-                    <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[40px] lg:w-[70%]">
-                        Let Onyx save you time, money, and get the job done with ease.
-                    </Heading>
+                <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[40px] lg:w-[70%]">
+                    Let Onyx save you time, money, and get the job done with ease.
+                </Heading>
                 
                 <div ref={scrollTargetRef}></div>
 
@@ -509,7 +508,7 @@ export default function Page() {
                             ref={el => {
                                 if (el) cardsRef.current[index] = el;
                             }}
-                            key={index}
+                            key={`${index}-${selectedTag}`}
                             >
                             <UseCasesCard
                                 icon={card.icon}

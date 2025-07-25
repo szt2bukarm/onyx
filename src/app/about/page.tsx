@@ -1,5 +1,5 @@
-import Awards from "@/components/about/ourmission/Awards";
-import LeadershipTeam from "@/components/about/ourmission/LeadershipTeam";
+import Awards from "@/components/about/Awards";
+import LeadershipTeam from "@/components/about/LeadershipTeam";
 import OurMission from "@/components/about/ourmission/OurMission";
 import Head from "@/components/common/Head";
 import JoinOnyx from "@/components/common/joinonyx/JoinOnyx";
