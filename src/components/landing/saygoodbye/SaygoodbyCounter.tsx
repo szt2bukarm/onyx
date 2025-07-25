@@ -14,7 +14,7 @@ export default function SaygoodbyCounter() {
     useGSAP(() => {
         let trigger = ScrollTrigger.create({
             trigger: "[data-gsap='saygoodbye']",
-            start: "top bottom",
+            start: "top-=150 bottom",
             once: true,
             onEnter: () => {
                 spinNumber(1,0);
