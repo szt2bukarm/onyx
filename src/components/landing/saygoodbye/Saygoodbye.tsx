@@ -1,6 +1,6 @@
 
 "use client"
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Video from "../../common/Video";
 import SaygoodbyeText from "./SaygoodbyeText";
 import gsap from "gsap";
@@ -14,6 +14,19 @@ export default function Saygoodbye({setStickyKey}: {setStickyKey: any}) {
     const wrapperRef = useRef<HTMLDivElement>(null);
     const smallPlayBtnRef = useRef<HTMLDivElement>(null);
     const largePlayBtnRef = useRef<HTMLDivElement>(null);
+    const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0);
+
+    useEffect(() => {
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+    
+        window.addEventListener("resize", handleResize);
+    
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }, []);
 
     const createSizeTimeline = () => {
       const tl = gsap.timeline({
@@ -81,7 +94,7 @@ export default function Saygoodbye({setStickyKey}: {setStickyKey: any}) {
           window.removeEventListener("resize", handleResize);
         }
 
-      }, [window.innerWidth]);
+      }, [windowWidth]);
 
     return (
         <div ref={wrapperRef} className="relative md:px-[80px] px-[20px] pb-[120px] bg-onyx-500">
