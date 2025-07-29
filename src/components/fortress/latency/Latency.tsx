@@ -18,15 +18,15 @@ export default function Latency() {
                 <div className="flex flex-col gap-[16px]">
                     <div className="flex items-center gap-[12px]">
                         <img src="union.svg" className="h-[18px]"></img>
-                        <p className="font-medium text-lg leading-lg text-neutral-700">Faster than Homomorphic Encryption (FHE)</p>
+                        <p className="font-medium text-md leading-md sm:text-lg leading-lg text-neutral-700">Faster than Homomorphic Encryption (FHE)</p>
                     </div>
                     <div className="flex items-center gap-[12px]">
                         <img src="union.svg" className="h-[18px]"></img>
-                        <p className="font-medium text-lg leading-lg text-neutral-700">Faster than Multi-Party Computation (MPC)</p>
+                        <p className="font-medium text-md leading-md sm:text-lg leading-lg text-neutral-700">Faster than Multi-Party Computation (MPC)</p>
                     </div>
                     <div className="flex items-center gap-[12px]">
                         <img src="union.svg" className="h-[18px]"></img>
-                        <p className="font-medium text-lg leading-lg text-neutral-700">Faster than Zero Knowledge Proof (ZK)</p>
+                        <p className="font-medium text-md leading-md sm:text-lg leading-lg text-neutral-700">Faster than Zero Knowledge Proof (ZK)</p>
                     </div>
                 </div>
             </div>

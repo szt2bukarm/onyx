@@ -16,7 +16,7 @@ export default function Page() {
                 <span className="text-onyx-500">Your cloud provider sees nothing.</span>
             </Head>
 
-            <div className="flex flex-col gap-[80px] px-[20px] sm:px-[80px] pb-[80px] pt-[120px]">
+            <div className="flex flex-col gap-[80px] px-[20px] sm:px-[80px] pb-[80px] md:pb-[120px] pt-[80px] sm:pt-[120px]">
                 <LargeTextBox label="WHAT IS FORTRESS">
                     <p className="mb-[40px]"><span className="text-onyx-500">Onyx Fortress</span> is end-to-end encryption of your AI activity, visible to no one but you.</p>
                     <br></br>

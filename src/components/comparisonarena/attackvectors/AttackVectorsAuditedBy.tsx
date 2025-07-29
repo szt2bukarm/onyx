@@ -1,6 +1,6 @@
 export default function AttackVectorsAuditedBy() {
     return (
-        <div className="py-[56px] text-center">
+        <div className="sm:py-[56px] text-center">
             <p className="font-regular text-h5 leading-h5 text-white mb-[32px]">Attacked and audited by:</p>
 
             <div className="flex gap-[40px] items-center justify-center flex-wrap">

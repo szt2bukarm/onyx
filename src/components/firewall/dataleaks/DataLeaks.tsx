@@ -2,7 +2,7 @@ import TestimonialCard from "@/components/common/TestimonialCard";
 
 export default function DataLeaks() {
     return (
-        <div className="px-[20px] sm:px-[80px] py-[120px] bg-creambg flex flex-col lg:flex-row justify-between min-h-[290px]">
+        <div className="px-[20px] sm:px-[80px] pt-[60px] md:pt-[120px] pb-[20px] sm:pb-[120px] bg-creambg flex flex-col lg:flex-row justify-between min-h-[290px]">
 
             {/* left */}
             <div className="flex flex-col gap-[48px] lg:pr-[80px] mb-[48px] lg:mb-0">

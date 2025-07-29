@@ -22,7 +22,7 @@ export default function WhyPrivacy() {
 
             <FeatureListWhyPrivacy />
 
-            <div className="px-[20px] sm:px-[80px] py-[120px] bg-creambg">
+            <div className="px-[20px] sm:px-[80px] pt-[60px] sm:pt-[120px] pb-[20px] sm:pb-[120px] bg-creambg">
                 <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[48px]">Minimize the Risk of Plaintext Exposure</Heading>
 
                 <div className="flex flex-col xl:flex-row justify-between gap-[24px] xl:gap-[80px]">
@@ -42,7 +42,7 @@ export default function WhyPrivacy() {
             <WhyPrivacyStockVideo />
             <Streamline />
 
-            <div className="px-[20px] sm:px-[80px] py-[120px] bg-creambg">
+            <div className="px-[20px] sm:px-[80px]  pt-[60px] sm:pt-[120px] pb-[20px] sm:pb-[120px] bg-creambg">
                 <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[48px]">Mitigate Insider Threats and Misconfigurations</Heading>
 
                 <div className="flex flex-col xl:flex-row justify-between gap-[24px] xl:gap-[80px]">

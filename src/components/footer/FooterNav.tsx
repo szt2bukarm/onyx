@@ -40,9 +40,9 @@ export default function FooterNav() {
             <div data-gsap="footer-nav-2">
                 <p className="text-md leading-md lg:text-sm lg:leading-sm text-white mb-[24px]">PRODUCTS</p>
                 <div className="flex flex-col gap-[12px] text-md leading-md lg:text-sm lg:leading-sm text-neutral-100">
-                    <FooterNavLink href="#">Onyx Fortress</FooterNavLink>
+                    <FooterNavLink href="/fortress">Onyx Fortress</FooterNavLink>
                     <FooterNavLink href="#">Onyx Cloud Wall</FooterNavLink>
-                    <FooterNavLink href="#">ChatGPT Veil</FooterNavLink>
+                    <FooterNavLink href="/veil">ChatGPT Veil</FooterNavLink>
                     <FooterNavLink href="#">Onyx Blind RAG</FooterNavLink>
                     <FooterNavLink href="#">Onyx Blind Search</FooterNavLink>
                     <FooterNavLink href="#">Onyx Custom AI</FooterNavLink>
@@ -51,9 +51,9 @@ export default function FooterNav() {
             <div data-gsap="footer-nav-3">
                 <p className="text-md leading-md lg:text-sm lg:leading-sm text-white mb-[24px]">INFORMATION</p>
                 <div className="flex flex-col gap-[12px] text-md leading-md lg:text-sm lg:leading-sm text-neutral-100">
-                    <FooterNavLink href="#">Why Privacy</FooterNavLink>
+                    <FooterNavLink href="/whyprivacy">Why Privacy</FooterNavLink>
                     <FooterNavLink href="#">Supported Models</FooterNavLink>
-                    <FooterNavLink href="#">Work Use Cases</FooterNavLink>
+                    <FooterNavLink href="/usecases">Work Use Cases</FooterNavLink>
                     <FooterNavLink href="#">Attack Vectors</FooterNavLink>
                     <FooterNavLink href="#">Video Center</FooterNavLink>
                     <FooterNavLink href="#">Tutorials</FooterNavLink>
@@ -63,8 +63,8 @@ export default function FooterNav() {
                 <p className="text-md leading-md lg:text-sm lg:leading-sm text-white mb-[24px]">COMPANY</p>
                 <div className="flex flex-col gap-[12px] text-md leading-md lg:text-sm lg:leading-sm text-neutral-100 ">
                     <FooterNavLink href="#">Talk to us</FooterNavLink>
-                    <FooterNavLink href="#">Research</FooterNavLink>
-                    <FooterNavLink href="#">About</FooterNavLink>
+                    <FooterNavLink href="/research">Research</FooterNavLink>
+                    <FooterNavLink href="/about">About</FooterNavLink>
                     <FooterNavLink href="#">Support</FooterNavLink>
                     <FooterNavLink href="#">Media Kit</FooterNavLink>
                     <FooterNavLink href="#">Blog</FooterNavLink>

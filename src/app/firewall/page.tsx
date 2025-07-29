@@ -15,7 +15,7 @@ export default function Page() {
             </Head>
             <DataLeaks />
             <NoSwitchingCost />
-            <div className="px-[20px] sm:px-[80px] pb-[120px]">
+            <div className="px-[20px] sm:px-[80px] pb-[80px] md:pb-[120px]">
                 <LargeTextBox label="FOR LARGE TEAMS" links={["See the research", "See the security proofs"]}>
 
                     <p className="mb-[40px]"><span className="text-onyx-500">Onyx Firewall</span> also greatly simplifies your AI/ML team’s internal access headaches. Forget about complex access controls for your personnel across many different cloud accounts.

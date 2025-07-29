@@ -7,7 +7,7 @@ import Heading from "../../common/Heading";
 export default function Encrypt() {
 
     return (
-        <div className="min-w-full bg-creambg py-[120px] px-[20px] sm:px-[80px]">
+        <div className="min-w-full bg-creambg pt-[120px] pb-[60px] sm:pb-[120px] px-[20px] sm:px-[80px]">
             <div className="flex flex-col lg:flex-row justify-between gap-[32px] lg:gap-[64px]">
                 <div className="w-full lg:w-[840px] h-full">
                     <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[24px]">Understanding the breakthrough technology behind Onyx, Equivariant Encryption (EE).</Heading>

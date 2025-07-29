@@ -1,3 +1,4 @@
+
 "use client"
 import { useRef } from "react";
 import Video from "../../common/Video";
@@ -10,48 +11,48 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Saygoodbye({setStickyKey}: {setStickyKey: any}) {
     const videoRef = useRef<HTMLDivElement>(null);
+    const wrapperRef = useRef<HTMLDivElement>(null);
     const smallPlayBtnRef = useRef<HTMLDivElement>(null);
     const largePlayBtnRef = useRef<HTMLDivElement>(null);
 
+    const createSizeTimeline = () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: wrapperRef.current,
+          start: "10% 30%",
+          end: "35% 30%",
+          scrub: true,
+        }
+      });
+
+      tl.fromTo(videoRef.current, {
+        width: "100%",
+        height: 600
+      },{
+        width: 300,
+        height: 200,
+        ease: "power4.out",
+        duration: 1,
+        onComplete: () => {
+          setStickyKey(1);
+        }
+      }, 0)
+
+      return tl
+    }
+
     useGSAP(() => {
-        gsap.to(videoRef.current, {
-          ease: "none",
-          position: "sticky",
-          top: "150",
-          scrollTrigger: {
-            trigger: videoRef.current,
-            start: "top 30%",
-            end: "bottom 30%",
-            // scrub: true,
-            // markers: true
-          }
-        });
+        let tl = createSizeTimeline();
 
-        gsap.to(videoRef.current, {
-          width: 300,
-          height: 180,
-          ease: "none",
-          scrollTrigger: {
-            trigger: videoRef.current,
-            start: "15% 30%",
-            end: "35% 30%",
-            scrub: true,
-            // markers: true
-          },
-          onComplete: () => {
-            setStickyKey(1);
-          }
-        })
-
+        
         gsap.to(largePlayBtnRef.current, {
           opacity: 0,
           ease: "none",
           scrollTrigger: {
             trigger: videoRef.current,
-            start: "20% 30%",
-            end: "22% 30%",
+            start: "30% 30%",
+            end: "32% 30%",
             scrub: true,
-            // markers: true
           }
         })
 
@@ -60,22 +61,40 @@ export default function Saygoodbye({setStickyKey}: {setStickyKey: any}) {
           ease: "none",
           scrollTrigger: {
             trigger: videoRef.current,
-            start: "20% 30%",
-            end: "22% 30%",
+            start: "30% 30%",
+            end: "32% 30%",
             scrub: true,
-            // markers: true
           }
         })
 
-      }, []);
+        const handleResize = () => {
+          tl.revert();
+          requestAnimationFrame(() => {
+            tl = createSizeTimeline();
+            ScrollTrigger.refresh();
+          });
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        }
+
+      }, [window.innerWidth]);
 
     return (
-        <div className="relative sm:px-[80px] px-[20px] pb-[120px] bg-onyx-500">
+        <div ref={wrapperRef} className="relative md:px-[80px] px-[20px] pb-[120px] bg-onyx-500">
             <div className="absolute top-0 left-0 w-full h-[100px] bg-white z-0"></div>
 
-              <div className="h-[600px] mb-[80px]" ref={videoRef}>
-                <div className="min-h-full w-full bg-[url('/videoplaceholder.png')] bg-cover bg-center relative">
+              <div className="block xxl:hidden h-[460px] md:h-[600px] w-full mb-[80px]">
+                <Video name="Guy Guy" role="Head of Global Technology, Procter and Gamble" showWatchVideo={false} buttonColor="primary" buttonSize="large"/>
+              </div>
 
+              <div className="hidden xxl:block h-[600px] w-full mb-[80px] xxl:sticky xxl:top-[150px]" ref={videoRef}>
+                <div className="min-h-full w-[100%] bg-[url('/videoplaceholder.png')] bg-cover bg-center relative">
+
+                 {/* big player */}
                 <div ref={largePlayBtnRef} className="absolute bottom-0 p-[40px] w-full flex justify-between">
                     <div className="mr-0 md:mr-[24px]">
                         <PlayVideoButton size={"large"} color={"primary"} />
@@ -89,6 +108,7 @@ export default function Saygoodbye({setStickyKey}: {setStickyKey: any}) {
                     </div>
                 </div>
 
+                {/* small player */}
                 <div ref={smallPlayBtnRef} className="opacity-0 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
                   <PlayVideoButton size={"large"} color={"primary"} />
                 </div>

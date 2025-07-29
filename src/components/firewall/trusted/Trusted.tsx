@@ -2,7 +2,7 @@ import Heading from "@/components/common/Heading";
 
 export default function Trusted() {
     return (
-        <div className="px-[20px] sm:px-[80px] lg:pt-[120px] pb-[120px] bg-white">
+        <div className="px-[20px] sm:px-[80px] lg:pt-[120px] pb-[60px] sm:pb-[120px] bg-white">
             <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[32px]">Trusted by</Heading>
 
             <div className="flex flex-col lg:flex-row gap-[32px]">

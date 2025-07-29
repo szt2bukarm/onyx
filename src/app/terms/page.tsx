@@ -13,7 +13,7 @@ export default function Page() {
 
             <div className="px-[20px] sm:px-[80px] py-[80px] flex gap-[80px]">
 
-                <div className="p-[40px] bg-creambg hidden lg:flex flex-col min-w-[305px] h-fit">
+                <div className="p-[40px] bg-creambg hidden lg:flex flex-col min-w-[305px] h-fit sticky top-[120px]">
                     <p className="font-medium text-sm leading-sm text-neutral-800 mb-[20px]">TABLE OF CONTENTS</p>
                     <div className="flex flex-col gap-[10px]">
                         <a href="#our-services" className="font-regular text-sm leading-sm text-neutral-700">Our Services</a>

@@ -5,7 +5,7 @@ const links = ["See the research", "See the security proofs"]
 
 export default function BlindRag() {
     return (
-        <div className="px-[20px] sm:px-[80px] pt-[80px] pb-[120px] bg-neutral-800 flex flex-col gap-[40px]">
+        <div className="px-[20px] sm:px-[80px] pt-[60px] md:pt-[120px] pb-[20px] sm:pb-[120px] bg-neutral-800 flex flex-col gap-[40px]">
 
             {/* header */}
             <div className="flex flex-col gap-[8px] lg:flex-row lg:gap-0 justify-between">

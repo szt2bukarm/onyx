@@ -35,7 +35,7 @@ export default function SameAIModels() {
     })
 
     return (
-        <div className="px-[20px] sm:px-[80px] py-[120px] bg-creambg">
+        <div className="px-[20px] sm:px-[80px] pt-[80px] md:pt-[120px] pb-[20px] sm:pb-[120px] bg-creambg">
             <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[16px]">Use your same AI models</Heading>
 
             <div className="flex flex-col lg:flex-row justify-between mb-[48px]">

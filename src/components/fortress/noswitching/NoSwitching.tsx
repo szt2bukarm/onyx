@@ -4,7 +4,7 @@ const logos = ["aws","microsoft","openai","google"]
 
 export default function NoSwitching() {
     return (
-        <div className="px-[20px] sm:px-[80px] py-[120px] bg-white">
+        <div className="px-[20px] sm:px-[80px] pt-[60px] sm:pt-[120px] pb-[20px] sm:pb-[120px] bg-white">
             <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[64px]">No Switching<br></br>Stay on your same cloud provider</Heading>
 
             <div className="w-full">

@@ -2,10 +2,10 @@ import Heading from "@/components/common/Heading";
 
 export default function CryptographicProofs() {
     return (
-        <div className="px-[20px] sm:px-[80px] py-[120px] bg-white">
+        <div className="px-[20px] sm:px-[80px] pt-[60px] sm:pt-[120px] pb-[20px] sm:pb-[120px] bg-white">
             <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[48px]">Onyx Cryptographic Proofs</Heading>
 
-            <div className="flex flex-col lg:flex-row gap-[16px] min-h-auto md:min-h-[640px] mb-[48px]">
+            <div className="flex flex-col lg:flex-row gap-[16px] min-h-auto md:min-h-[640px] sm:mb-[48px]">
                 <div className="flex flex-col gap-[48px] font-regular border border-black w-full">
                     <div className="bg-gray-200 min-h-[200px] sm:min-h-[308px]"></div>
                     <div className="flex flex-col h-full px-[24px] pb-[24px] sm:px-[48px] sm:pb-[48px]">
