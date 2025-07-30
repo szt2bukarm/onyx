@@ -54,39 +54,58 @@ export default function Saygoodbye({setStickyKey}: {setStickyKey: any}) {
       return tl
     }
 
+    const createButtonTimeline = () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: wrapperRef.current,
+          start: "15% 30%",
+          end: "20% 30%",
+          scrub: true,
+        }
+      });
+
+      tl.fromTo(smallPlayBtnRef.current, {
+        opacity: 0,
+      },{
+        opacity: 1,
+        ease: "power4.out",
+        duration: 0.01,
+      }, 0)
+
+      tl.fromTo(largePlayBtnRef.current, {
+        opacity: 1,
+      },{
+        opacity: 0,
+        ease: "power4.out",
+        duration: 0.01,
+      }, 0)
+
+      return tl
+    }
+    
+      
+
     useGSAP(() => {
         let tl = createSizeTimeline();
+        let btnTl = createButtonTimeline();
 
-        
-        gsap.to(largePlayBtnRef.current, {
-          opacity: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: videoRef.current,
-            start: "30% 30%",
-            end: "32% 30%",
-            scrub: true,
-          }
-        })
-
-        gsap.to(smallPlayBtnRef.current, {
-          opacity: 1,
-          ease: "none",
-          scrollTrigger: {
-            trigger: videoRef.current,
-            start: "30% 30%",
-            end: "32% 30%",
-            scrub: true,
-          }
-        })
+        let resizeTimeout: ReturnType<typeof setTimeout> | null = null;
 
         const handleResize = () => {
-          tl.revert();
-          requestAnimationFrame(() => {
-            tl = createSizeTimeline();
-            ScrollTrigger.refresh();
-          });
+          if (resizeTimeout) clearTimeout(resizeTimeout);
+
+          resizeTimeout = setTimeout(() => {
+            tl.revert();
+            btnTl.revert();
+            requestAnimationFrame(() => {
+              videoRef.current.style.height = "600px"
+              ScrollTrigger.refresh();
+              tl = createSizeTimeline();
+              btnTl = createButtonTimeline();
+            });
+          }, 100);
         };
+
 
         window.addEventListener("resize", handleResize);
 
