@@ -6,15 +6,28 @@ import { useEffect, useState } from "react";
 import useOperatingSystem from "../../util/useOperatingSystem";
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SaygoodbyCounter() {
+export default function SaygoodbyeCounter() {
     const os = useOperatingSystem();
+    const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0);
 
     const padding = os === "Windows" ? "pt-0": "pt-3";
 
+    useEffect(() => {
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+    
+        window.addEventListener("resize", handleResize);
+    
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }, []);
+    
     useGSAP(() => {
         let trigger = ScrollTrigger.create({
             trigger: "[data-gsap='saygoodbye']",
-            start: "top-=150 bottom",
+            start: `top${windowWidth > 1600 ? "-=150" : ""} bottom`,
             once: true,
             onEnter: () => {
                 spinNumber(1,0);

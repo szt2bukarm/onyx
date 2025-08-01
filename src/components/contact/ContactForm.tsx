@@ -37,11 +37,11 @@ export default function ContactForm() {
                 {/* acknowledgement */}
                 <div className="flex gap-[12px] items-start">
                     {/* Hidden native checkbox */}
-                    <label htmlFor="Acknowledgement" className="flex gap-[12px] cursor-pointer">
+                    <label htmlFor="AcknowledgementContact" className="flex gap-[12px] cursor-pointer">
                         <input
                         type="checkbox"
-                        id="Acknowledgement"
-                        name="Acknowledgement"
+                        id="AcknowledgementContact"
+                        name="AcknowledgementContact"
                         required
                         className="peer hidden"
                         />

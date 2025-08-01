@@ -4,10 +4,19 @@ import JoinOnyx from "@/components/common/joinonyx/JoinOnyx";
 import Footer from "@/components/footer/Footer";
 import ResearchBigLinks from "@/components/research/ResearchBigLinks";
 import ResearchGridLinks from "@/components/research/ResearchGridLinks";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
     const [selectedTag,setSelectedTag] = useState("All")
+    
+    useEffect(() => {
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 200);
+    }, []);
 
     return (
         <>

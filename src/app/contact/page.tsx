@@ -1,10 +1,21 @@
+"use client"
 import Head from "@/components/common/Head";
-import InlineLink from "@/components/common/InlineLink";
 import JoinOnyx from "@/components/common/joinonyx/JoinOnyx";
 import ContactForm from "@/components/contact/ContactForm";
 import Footer from "@/components/footer/Footer";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
+    
+    useEffect(() => {
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 200);
+    }, []);
+
     return (
         <>
         

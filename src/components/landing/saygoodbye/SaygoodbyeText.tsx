@@ -1,6 +1,6 @@
 import Heading from "../../common/Heading";
 import InlineLink from "../../common/InlineLink";
-import SaygoodbyCounter from "./SaygoodbyCounter";
+import SaygoodbyCounter from "./SaygoodbyeCounter";
 
 export default function SaygoodbyeText() {
     return (

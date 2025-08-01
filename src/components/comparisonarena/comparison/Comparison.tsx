@@ -1,4 +1,6 @@
 import Heading from "@/components/common/Heading"
+import { useFadeInStagger } from "@/hooks/useFadeInStagger";
+import { useRef } from "react";
 
 const data = [
     {
@@ -34,6 +36,9 @@ const data = [
 ]
 
 export default function Comparison() {
+    const cardsRef = useRef<HTMLDivElement[]>([])
+    useFadeInStagger(cardsRef);
+
     return (
         <div className="px-[20px] sm:px-[80px] pt-[60px] sm:pt-[120px] pb-[20px] sm:pb-[120px] bg-creambg">
             <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[48px]">Compare</Heading>
@@ -41,7 +46,7 @@ export default function Comparison() {
 
             <div className="flex flex-col gap-[16px] lg:gap-[8px]">
             {data.map((card, index) => (
-                <div className="flex flex-col lg:flex-row gap-[48px] bg-white p-[32px]" key={index}>
+                <div ref={el => cardsRef.current[index] = el} className="flex flex-col lg:flex-row gap-[48px] bg-white p-[32px]" key={index}>
 
                     <div className="flex-1 flex-col md:flex-row flex gap-[24px] md:gap-[48px]">
                     <div className="flex flex-col gap-[12px] max-w-[140px] min-w-[140px]">

@@ -1,9 +1,14 @@
 import Heading from "@/components/common/Heading";
 import InlineLink from "@/components/common/InlineLink";
+import { useFadeInStagger } from "@/hooks/useFadeInStagger";
+import { useRef } from "react";
 
 const links = ["See the research", "See the security proofs"]
 
 export default function BlindRag() {
+    const cardsRef = useRef<HTMLDivElement[]>([])
+    useFadeInStagger(cardsRef);
+
     return (
         <div className="px-[20px] sm:px-[80px] pt-[60px] md:pt-[120px] pb-[20px] sm:pb-[120px] bg-neutral-800 flex flex-col gap-[40px]">
 
@@ -24,7 +29,7 @@ export default function BlindRag() {
                 <p className="font-medium text-white text-sm mb-[24px]">FORTUNE 500 ENTERPRISES</p>
                 <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-[8px]">
                     {Array.from({length: 8}).map((_, i) => (
-                        <div className="h-[144px] w-full bg-neutral-700 p-[8px] flex justify-center items-center" key={i}>
+                        <div ref={el => cardsRef.current[i] = el} className="h-[144px] w-full bg-neutral-700 p-[8px] flex justify-center items-center" key={i}>
                             <img src={`placeholdertrusted1.png`} className="h-[30px]"/>
                         </div>
                     ))}

@@ -121,9 +121,14 @@ export default function ResearchGridLinks({selectedTag,setSelectedTag} : {any}) 
     const scrollTargetRef = useRef<HTMLDivElement>(null)
     const lenis = useLenis();
     const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0);
+    const [mounted, setMounted] = useState(false); // needed to prevent automatic scrolling on inital render
 
     useGSAP(() => {
-        
+        if (!mounted) {
+            setMounted(true);
+            return;
+        }
+
         if (scrollTargetRef.current && window.scrollY > scrollTargetRef.current.offsetTop) {
             lenis?.stop();
             setTimeout(() => {
@@ -154,7 +159,7 @@ export default function ResearchGridLinks({selectedTag,setSelectedTag} : {any}) 
             
         }
 
-    }, [selectedTag])
+    }, [selectedTag,mounted])
 
 
 

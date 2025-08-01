@@ -1,3 +1,4 @@
+"use client"
 import Head from "@/components/common/Head";
 import Heading from "@/components/common/Heading";
 import JoinOnyx from "@/components/common/joinonyx/JoinOnyx";
@@ -10,8 +11,19 @@ import RiskCard from "@/components/whyprivacy/risk/RIskCard";
 import Streamline from "@/components/whyprivacy/streamline/Streamline";
 import Upgrade from "@/components/whyprivacy/upgrade/Upgrade";
 import WhyPrivacyStockVideo from "@/components/whyprivacy/whyprivacystockvideo/WhyPrivacyStockVideo";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
-export default function WhyPrivacy() {
+export default function Page() {
+    
+    useEffect(() => {
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 200);
+    }, []);
+
     return (
         <>
         

@@ -62,7 +62,7 @@ export default function FooterNav() {
             <div data-gsap="footer-nav-4">
                 <p className="text-md leading-md lg:text-sm lg:leading-sm text-white mb-[24px]">COMPANY</p>
                 <div className="flex flex-col gap-[12px] text-md leading-md lg:text-sm lg:leading-sm text-neutral-100 ">
-                    <FooterNavLink href="#">Talk to us</FooterNavLink>
+                    <FooterNavLink href="/contact">Talk to us</FooterNavLink>
                     <FooterNavLink href="/research">Research</FooterNavLink>
                     <FooterNavLink href="/about">About</FooterNavLink>
                     <FooterNavLink href="#">Support</FooterNavLink>

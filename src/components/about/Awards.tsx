@@ -1,5 +1,7 @@
 import Heading from "@/components/common/Heading";
 import Award from "./Award";
+import { useFadeInStagger } from "@/hooks/useFadeInStagger";
+import { useRef } from "react";
 
 const data = [
     {
@@ -137,31 +139,34 @@ const data = [
 ]
 
 export default function Awards() {
+    const cardsRef = useRef<HTMLDivElement[]>([])
+    useFadeInStagger(cardsRef);
+
     return (
         <div className="px-[20px] sm:px-[80px] pt-[60px] pb-[120px] bg-white">
             <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[50px] text-center">Award winning AI research</Heading>
 
             <div className="hidden w-full items-center justify-center xl:flex flex-col gap-[4vw] flex-wrap">
  
-                <div className="flex gap-[3vw] flex-wrap items-center justify-center">
+                <div ref={el => cardsRef.current[0] = el} className="flex gap-[3vw] flex-wrap items-center justify-center">
                 {data.slice(0,5).map((item, index) => (
                 <Award key={index} image={item.image} placement={item.placement} text={item.text} subtext={item.subtext} />
                 ))}
                 </div>
 
-                <div className="flex gap-[3vw] flex-wrap items-center justify-center">
+                <div ref={el => cardsRef.current[1] = el} className="flex gap-[3vw] flex-wrap items-center justify-center">
                 {data.slice(5,11).map((item, index) => (
                 <Award key={index} image={item.image} placement={item.placement} text={item.text} subtext={item.subtext} />
                 ))}
                 </div>
 
-                <div className="flex gap-[3vw] flex-wrap items-center justify-center">
+                <div ref={el => cardsRef.current[2] = el} className="flex gap-[3vw] flex-wrap items-center justify-center">
                 {data.slice(11,16).map((item, index) => (
                 <Award key={index} image={item.image} placement={item.placement} text={item.text} subtext={item.subtext} />
                 ))}
                 </div>
 
-                <div className="flex gap-[3vw] flex-wrap items-center justify-center">
+                <div ref={el => cardsRef.current[3] = el} className="flex gap-[3vw] flex-wrap items-center justify-center">
                 {data.slice(16,22).map((item, index) => (
                 <Award key={index} image={item.image} placement={item.placement} text={item.text} subtext={item.subtext} />
                 ))}

@@ -1,3 +1,4 @@
+"use client"
 import Head from "@/components/common/Head";
 import LargeTextBox from "@/components/common/LargeTextBox";
 import Video from "@/components/common/Video";
@@ -6,8 +7,19 @@ import BlindRag from "@/components/fortress/blindrag/BlindRag";
 import Latency from "@/components/fortress/latency/Latency";
 import NoSwitching from "@/components/fortress/noswitching/NoSwitching";
 import SameAIModels from "@/components/fortress/sameaimodels/SameAIModels";
+import { useEffect, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
+    
+    useEffect(() => {
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 200);
+    }, []);
+
     return (
     <>
         <main className="w-full h-full bg-white">

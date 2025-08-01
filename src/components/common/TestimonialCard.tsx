@@ -4,10 +4,10 @@ export default function TestimonialCard({text,name,image,role,index,transform,bo
         ${scaled ? "p-[32px]" : "p-[24px]"}
         ${border ? "border" : ""}
         ${thickBorder ? "border-white/50" : "border-neutral-600/60"}
-        w-full min-h-full
+        w-full !min-h-full
         ${theme === "onyx" ? "bg-onyx-500" : ""}
         ${index === 1 && transform ? "xl:-translate-y-1/2 xl:translate-x-[1px]" : ""}`}>
-            <div className="w-[80%] max-xl:mb-7">
+            <div className="w-[80%] mb-[24px]">
                 <img src="quote.svg" className={`w-[35px] mb-[24px] ${theme === "onyx" ? "invert" : ""}`} alt="quotion mark" />
                 <p className={`${scaled ? "text-md leading-md" : "text-sm leading-sm"}
                 ${theme === "black" ? "text-neutral-100" : ""}

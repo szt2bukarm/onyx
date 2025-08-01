@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitText from "gsap/src/SplitText";
 import TransitionLink from "@/components/TransitionLink";
+import Button from "../../common/Button";
 gsap.registerPlugin(SplitText);
 
 export default function HeroText() {
@@ -63,10 +64,10 @@ export default function HeroText() {
             <p data-gsap="hero-subtext" className="text-lg font-regular leading-lg text-neutral-100 mb-[18px] xl:w-full lg:w-[50%]">Onyx is the first AI that works on encrypted data - blind even to your cloud provider - for complete privacy without any special hardware.</p>
             <div data-gsap="hero-cta" className="w-fit flex gap-[16px] flex-col xs:flex-row mb-[80px]">
                 <TransitionLink href="/veil">
-                <CTAButton variant="primary">TRY IT NOW</CTAButton>
+                <Button variant="primary">TRY IT NOW</Button>
                 </TransitionLink>
                 <TransitionLink href="/fortress">
-                <CTAButton variant="secondary">GET THE API</CTAButton>
+                <Button variant="secondary">GET THE API</Button>
                 </TransitionLink>
             </div>
             <div className="flex">

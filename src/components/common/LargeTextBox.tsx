@@ -52,7 +52,7 @@ export default function LargeTextBox({label,links,children} : {label: string, li
         </div>
 
         <div className="flex flex-col">
-            <div ref={textRef} className="font-regular text-h5 leading-h5 lg:text-h3 lg:leading-h3">{children}</div>
+            <div ref={textRef} className="font-regular text-h5 leading-h5 sm:text-h4 sm:leading-h4 lg:text-h3 lg:leading-h3">{children}</div>
 
             {links && (
                 <div className="w-full border-t-1 border-neutral-200 flex gap-[24px] sm:gap-[48px] pt-[32px] mt-[40px] flex-wrap">

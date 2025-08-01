@@ -1,11 +1,23 @@
+"use client"
 import Head from "@/components/common/Head";
 import LargeTextBox from "@/components/common/LargeTextBox";
 import DataLeaks from "@/components/firewall/dataleaks/DataLeaks";
 import NoSwitchingCost from "@/components/firewall/noswitchingcost/NoSwitchingCost";
 import Trusted from "@/components/firewall/trusted/Trusted";
 import Footer from "@/components/footer/Footer";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
+    
+    useEffect(() => {
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 200);
+    }, []);
+
     return (
         <>
         <main className="w-full h-full bg-white">

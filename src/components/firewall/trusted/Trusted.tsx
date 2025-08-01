@@ -1,6 +1,11 @@
 import Heading from "@/components/common/Heading";
+import { useFadeInStagger } from "@/hooks/useFadeInStagger";
+import { useRef } from "react";
 
 export default function Trusted() {
+    const cardsRef = useRef<HTMLDivElement[]>([])
+    useFadeInStagger(cardsRef);
+
     return (
         <div className="px-[20px] sm:px-[80px] lg:pt-[120px] pb-[60px] sm:pb-[120px] bg-white">
             <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[32px]">Trusted by</Heading>
@@ -12,7 +17,7 @@ export default function Trusted() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-[8px]">
 
                         {Array.from({length: 4}, (_, i) => (
-                            <div className="h-[144px] w-full bg-[#F2F2F2] p-[8px] flex justify-center items-center" key={i}>
+                            <div ref={el => cardsRef.current[i] = el} className="h-[144px] w-full bg-[#F2F2F2] p-[8px] flex justify-center items-center" key={i}>
                                 <img src="placeholdertrusted1.png" className="h-[30px]" />
                             </div>
                         ))}
@@ -25,7 +30,7 @@ export default function Trusted() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-[8px]">
 
                         {Array.from({length: 4}, (_, i) => (
-                            <div className="h-[144px] w-full bg-[#F2F2F2] p-[8px] flex justify-center items-center" key={i}>
+                            <div ref={el => cardsRef.current[i+4] = el} className="h-[144px] w-full bg-[#F2F2F2] p-[8px] flex justify-center items-center" key={i}>
                                 <img src="placeholdertrusted1.png" className="h-[30px]" />
                             </div>
                         ))}

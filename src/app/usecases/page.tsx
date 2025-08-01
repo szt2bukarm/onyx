@@ -417,14 +417,25 @@ const cards = [
 const tags = ["All","Sales","Customer Service", "Supply Chain", "Analysis", "Product Development", "Compliance", "Financial Forecasting", "Fraud Detection", "Human Resources", "Customer Relationship"]
 
 export default function Page() {
+    
+    useEffect(() => {
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 200);
+    }, []);
+
     const [selectedTag, setSelectedTag] = useState("All");
     const cardsRef = useRef<HTMLDivElement[]>([])
     const scrollTargetRef = useRef<HTMLDivElement>(null)
     const lenis = useLenis();
     const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0);
+    const [mounted, setMounted] = useState(false); // needed to prevent automatic scrolling on inital render
 
     useGSAP(() => {
-        
+        if (!mounted) {
+            setMounted(true);
+            return;
+        }
         if (scrollTargetRef.current && window.scrollY > scrollTargetRef.current.offsetTop) {
             lenis?.stop();
             setTimeout(() => {
@@ -455,7 +466,7 @@ export default function Page() {
             
         }
 
-    }, [selectedTag])
+    }, [selectedTag, mounted])
 
     useEffect(() => {
         const handleResize = () => {

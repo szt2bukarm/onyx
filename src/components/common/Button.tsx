@@ -8,7 +8,7 @@ export default function Button({variant,children}: {variant: string, children: R
         `}>
         
             {children}
-            <img src="arrow.svg" alt="arrow" className={`transition duration-150 ${variant === "primary" ? "invert group-hover:invert-0" : "group-hover:invert"}`}/>
+            <img src="arrow.svg" alt="arrow" className={`transition duration-150 ${variant === "primary" || variant === "black" ? "invert group-hover:invert-0" : "group-hover:invert"}`}/>
         </button>
     )
 

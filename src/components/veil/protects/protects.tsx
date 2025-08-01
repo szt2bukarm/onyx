@@ -1,4 +1,6 @@
 import Heading from "@/components/common/Heading";
+import { useFadeInStagger } from "@/hooks/useFadeInStagger";
+import { useRef } from "react";
 
 const models = [
     {
@@ -28,6 +30,9 @@ const models = [
 ]
 
 export default function Protects() {
+    const cardsRef = useRef<HTMLDivElement[]>([])
+    useFadeInStagger(cardsRef);
+
     return (
         <div className="px-[20px] sm:px-[80px] py-[120px] bg-white flex flex-col gap-[40px] lg:gap-0 lg:flex-row lg:justify-between">
 
@@ -48,7 +53,7 @@ export default function Protects() {
             {/* model logos - right */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-[8px] lg:w-[50%]">
                 {models.map((model, index) => (
-                    <div key={index} className="min-h-[140px] flex flex-col justify-between items-start p-[24px] bg-[#F2F2F2]">
+                    <div ref={el => cardsRef.current[index] = el} key={index} className="min-h-[140px] flex flex-col justify-between items-start p-[24px] bg-[#F2F2F2]">
                         <div className="flex items-center justify-center w-[44px] h-[44px] overflow-hidden p-[2px] rounded-[12px] shadow-[0px_16px_32px_-4px_rgba(0,0,0,0.15)] border-1 border-[#EDE6DF] mb-3">
                             <img src={`models/${model.file}`} className="h-full w-full object-contain rounded-[12px] bg-white"/>
                         </div>

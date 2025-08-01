@@ -1,3 +1,4 @@
+"use client"
 import Head from "@/components/common/Head";
 import Footer from "@/components/footer/Footer";
 import EarlyAccessForm from "@/components/common/joinonyx/EarlyAccessForm";
@@ -6,8 +7,19 @@ import Guardrails from "@/components/veil/guardrails/Guardrails";
 import Protects from "@/components/veil/protects/protects";
 import SecureAI from "@/components/common/joinonyx/SecureAI";
 import JoinOnyx from "@/components/common/joinonyx/JoinOnyx";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
+    
+    useEffect(() => {
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 200);
+    }, []);
+
     return (
     <>
         <main className="w-full h-full bg-white">
