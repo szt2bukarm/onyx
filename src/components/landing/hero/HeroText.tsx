@@ -59,8 +59,8 @@ export default function HeroText() {
       })
 
     return (
-        <div className="xl:pr-[180px] w-full max-xl:mb-20">
-            <h1 data-gsap="hero-text" className="font-regular text-white mb-[32px] xl:text-[4vw] xl:leading-[4vw] xl:w-full lg:w-[80%] lg:text-h1 lg:leading-h1 md:text-h2 md:leading-h2 text-h3 leading-h3 uppercase">Your own sovereign AI with complete privacy</h1>
+        <div className="w-full mb-[80px] pr-[48px]">
+            <h1 data-gsap="hero-text" className="font-regular text-white mb-[32px] xl:text-[4.35vw] xl:leading-[4.35vw] xl:w-full lg:w-[80%] lg:text-h1 lg:leading-h1 md:text-h2 md:leading-h2 text-h3 leading-h3 uppercase">Your own sovereign AI with full privacy</h1>
             <p data-gsap="hero-subtext" className="text-lg font-regular leading-lg text-neutral-100 mb-[18px] xl:w-full lg:w-[50%]">Onyx is the first AI that works on encrypted data - blind even to your cloud provider - for complete privacy without any special hardware.</p>
             <div data-gsap="hero-cta" className="w-fit flex gap-[16px] flex-col xs:flex-row mb-[80px]">
                 <TransitionLink href="/veil">
