@@ -2,7 +2,7 @@ import PlayVideoButton from "./PlayVideoButton";
 
 export default function VideoInline({video,name,role,image}: {video: string, name: string, role: string, image: string}) {
     return (
-    <div className="flex flex-col-reverse lg:flex-row justify-between items-start lg:items-center pb-[24px] lg:p-[24px] border-b border-black">
+    <div className="flex flex-col-reverse lg:flex-row justify-between items-start lg:items-center sm:pb-[24px] lg:p-[24px] sm:border-b border-black">
         <div className="flex items-center">
             <div className="mr-[24px]">
                 <PlayVideoButton size="small" color="cream" />

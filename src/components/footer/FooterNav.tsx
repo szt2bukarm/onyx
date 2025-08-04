@@ -2,7 +2,7 @@
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import ScrollTrigger from "gsap/ScrollTrigger"
-import FooterNavLink from "./FooterNavLink";
+import NavLink from "./NavLink";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function FooterNav() {
@@ -33,50 +33,50 @@ export default function FooterNav() {
             <div data-gsap="footer-nav-1">
                 <p className="text-md leading-md lg:text-sm lg:leading-sm text-white mb-[24px]">TRY NOW</p>
                 <div className="flex flex-col gap-[12px] text-md leading-md lg:text-sm lg:leading-sm text-neutral-100">
-                    <FooterNavLink href="#">Try Onyx Web</FooterNavLink>
-                    <FooterNavLink href="#">Try Onyx Api</FooterNavLink>
+                    <NavLink href="#">Try Onyx Web</NavLink>
+                    <NavLink href="#">Try Onyx Api</NavLink>
                 </div>
             </div>
             <div data-gsap="footer-nav-2">
                 <p className="text-md leading-md lg:text-sm lg:leading-sm text-white mb-[24px]">PRODUCTS</p>
                 <div className="flex flex-col gap-[12px] text-md leading-md lg:text-sm lg:leading-sm text-neutral-100">
-                    <FooterNavLink href="/fortress">Onyx Fortress</FooterNavLink>
-                    <FooterNavLink href="#">Onyx Cloud Wall</FooterNavLink>
-                    <FooterNavLink href="/veil">ChatGPT Veil</FooterNavLink>
-                    <FooterNavLink href="#">Onyx Blind RAG</FooterNavLink>
-                    <FooterNavLink href="#">Onyx Blind Search</FooterNavLink>
-                    <FooterNavLink href="#">Onyx Custom AI</FooterNavLink>
+                    <NavLink href="/fortress">Onyx Fortress</NavLink>
+                    <NavLink href="#">Onyx Cloud Wall</NavLink>
+                    <NavLink href="/veil">ChatGPT Veil</NavLink>
+                    <NavLink href="#">Onyx Blind RAG</NavLink>
+                    <NavLink href="#">Onyx Blind Search</NavLink>
+                    <NavLink href="#">Onyx Custom AI</NavLink>
                 </div>
             </div>
             <div data-gsap="footer-nav-3">
                 <p className="text-md leading-md lg:text-sm lg:leading-sm text-white mb-[24px]">INFORMATION</p>
                 <div className="flex flex-col gap-[12px] text-md leading-md lg:text-sm lg:leading-sm text-neutral-100">
-                    <FooterNavLink href="/whyprivacy">Why Privacy</FooterNavLink>
-                    <FooterNavLink href="#">Supported Models</FooterNavLink>
-                    <FooterNavLink href="/usecases">Work Use Cases</FooterNavLink>
-                    <FooterNavLink href="#">Attack Vectors</FooterNavLink>
-                    <FooterNavLink href="#">Video Center</FooterNavLink>
-                    <FooterNavLink href="#">Tutorials</FooterNavLink>
+                    <NavLink href="/whyprivacy">Why Privacy</NavLink>
+                    <NavLink href="#">Supported Models</NavLink>
+                    <NavLink href="/usecases">Work Use Cases</NavLink>
+                    <NavLink href="#">Attack Vectors</NavLink>
+                    <NavLink href="#">Video Center</NavLink>
+                    <NavLink href="#">Tutorials</NavLink>
                </div>
             </div>
             <div data-gsap="footer-nav-4">
                 <p className="text-md leading-md lg:text-sm lg:leading-sm text-white mb-[24px]">COMPANY</p>
                 <div className="flex flex-col gap-[12px] text-md leading-md lg:text-sm lg:leading-sm text-neutral-100 ">
-                    <FooterNavLink href="/contact">Talk to us</FooterNavLink>
-                    <FooterNavLink href="/research">Research</FooterNavLink>
-                    <FooterNavLink href="/about">About</FooterNavLink>
-                    <FooterNavLink href="#">Support</FooterNavLink>
-                    <FooterNavLink href="#">Media Kit</FooterNavLink>
-                    <FooterNavLink href="#">Blog</FooterNavLink>
-                    <FooterNavLink href="#">Safety</FooterNavLink>
+                    <NavLink href="/contact">Talk to us</NavLink>
+                    <NavLink href="/research">Research</NavLink>
+                    <NavLink href="/about">About</NavLink>
+                    <NavLink href="#">Support</NavLink>
+                    <NavLink href="#">Media Kit</NavLink>
+                    <NavLink href="#">Blog</NavLink>
+                    <NavLink href="#">Safety</NavLink>
                </div>
             </div>
             <div data-gsap="footer-nav-5" className="flex flex-wrap gap-[24px] sm:col-span-2 lg:col-span-4 xl:col-span-1 xl:mt-0">
-                <img className="w-[92px] h-[92px]" src="badges/ISO 27001.png" alt="ISO 27001" />
-                <img className="w-[92px] h-[92px]" src="badges/SOC2 Type 2.png" alt="SOC2 Type 2" />
-                <img className="w-[92px] h-[92px]" src="badges/GDPR.png" alt="GDPR" />
-                <img className="w-[92px] h-[92px]" src="badges/CSA STAR.png" alt="CSA STAR" />
-                <img className="w-[92px] h-[92px]" src="badges/HIPPAA.png" alt="HIPPAA" />
+                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/ISO 27001.png" alt="ISO 27001" />
+                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/SOC2 Type 2.png" alt="SOC2 Type 2" />
+                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/GDPR.png" alt="GDPR" />
+                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/CSA STAR.png" alt="CSA STAR" />
+                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/HIPPAA.png" alt="HIPPAA" />
             </div>
         </div>
     )

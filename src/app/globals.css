@@ -34,6 +34,10 @@ html {
   border-radius: 0px;
 }
 
+.section-padding {
+  @apply pt-[48px] pb-[48px] px-[20px] sm:pt-[120px] sm:pb-[120px] sm:px-[80px]
+}
+
 @theme {
   /* font */
   --font-regular: "HaasGrotText-Roman";
@@ -59,6 +63,7 @@ html {
   --text-h3: 48px;
   --text-h2: 56px;
   --text-h1: 80px;
+  --text-mobileheading: 40px;
 
   /* line heights */
   --leading-sm: 20px;
@@ -71,6 +76,7 @@ html {
   --leading-h3: 52px;
   --leading-h2: 68px;
   --leading-h1: 88px;
+  --leading-mobileheading: 44px;
 
   /* colors */
   --color-onyx-100: #FFEDEC;

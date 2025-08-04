@@ -37,8 +37,8 @@ const data = [
 
 export default function Testimonials() {
     return (
-        <div className="px-[20px] sm:px-[80px] py-[120px] bg-neutral-800">
-            <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white mb-[48px]">
+        <div className="section-padding bg-neutral-800">
+            <Heading className="font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white mb-[48px]">
                 What our users say
             </Heading>
 

@@ -1,4 +1,4 @@
-import Nav from "../../Nav";
+import Nav from "../../common/nav/Nav";
 import HeroTestimonial from "./HeroTestimonial";
 import HeroText from "./HeroText";
 

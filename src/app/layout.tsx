@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
+import Nav from "@/components/common/nav/Nav";
 import SmoothScroll from "./SmoothScroll";
 import { ViewTransitions } from "next-view-transitions";
 // import CustomEase from "gsap/CustomEase";
@@ -46,7 +46,9 @@ export default function RootLayout({
       <body>
         <Nav />
         <SmoothScroll>
+          <div data-gsap="page">
           {children}
+          </div>
         </SmoothScroll>
       </body>
     </html>

@@ -88,35 +88,35 @@ export default function Saygoodbye({setStickyKey}: {setStickyKey: any}) {
     }, [windowWidth]);
 
     return (
-        <div ref={wrapperRef} className="relative md:px-[80px] px-[20px] pb-[120px] bg-onyx-500">
+        <div ref={wrapperRef} className="relative md:px-[80px] px-[20px] pb-[48px] md:pb-[120px] bg-onyx-500">
             <div className="absolute top-0 left-0 w-full h-[100px] bg-white z-0"></div>
 
-            <div className="block xxl:hidden h-[460px] md:h-[600px] w-full mb-[80px]">
+            <div className="block xxl:hidden h-[280px] md:h-[600px] w-full mb-[48px] md:mb-[80px]">
                 <Video name="Guy Guy" role="Head of Global Technology, Procter and Gamble" showWatchVideo={false} buttonColor="primary" buttonSize="large"/>
             </div>
 
-            <div className="hidden xxl:block h-[600px] w-full mb-[80px] xxl:sticky xxl:top-[150px]" ref={videoRef}>
-                <div className="min-h-full w-[100%] bg-[url('/videoplaceholder.png')] bg-cover bg-center relative">
+              <div className="hidden xxl:block h-[600px] w-full mb-[80px] xxl:sticky xxl:top-[150px]" ref={videoRef}>
+                  <div className="min-h-full w-[100%] bg-[url('/videoplaceholder.png')] bg-cover bg-center relative">
 
-                 {/* big player */}
-                <div ref={largePlayBtnRef} className="absolute bottom-0 p-[40px] w-full flex justify-between">
-                    <div className="mr-0 md:mr-[24px]">
-                        <PlayVideoButton size={"large"} color={"primary"} />
-                    </div>
-                    <div className="flex items-center gap-[16px]">
-                        <img src="3.png" className="w-[48px] h-[48px]" />
-                        <div className="flex flex-col">
-                            <p className="text-md leading-md text-white font-medium">Guy Guy</p>
-                            <p className="text-sm leading-sm text-neutral-100 font-regular">Head of Global Technology, Procter and Gamble</p>
-                        </div>
-                    </div>
-                </div>
+                  {/* big player */}
+                  <div ref={largePlayBtnRef} className="absolute bottom-0 p-[40px] w-full flex justify-between">
+                      <div className="mr-0 md:mr-[24px]">
+                          <PlayVideoButton size={"large"} color={"primary"} />
+                      </div>
+                      <div className="flex items-center gap-[16px]">
+                          <img src="3.png" className="w-[48px] h-[48px]" />
+                          <div className="flex flex-col">
+                              <p className="text-md leading-md text-white font-medium">Guy Guy</p>
+                              <p className="text-sm leading-sm text-neutral-100 font-regular">Head of Global Technology, Procter and Gamble</p>
+                          </div>
+                      </div>
+                  </div>
 
-                {/* small player */}
-                <div ref={smallPlayBtnRef} className="opacity-0 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                  <PlayVideoButton size={"large"} color={"primary"} />
-                </div>
-            </div>
+                  {/* small player */}
+                  <div ref={smallPlayBtnRef} className="opacity-0 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                    <PlayVideoButton size={"large"} color={"primary"} />
+                  </div>
+              </div>
             </div>
             <SaygoodbyeText />
         </div>

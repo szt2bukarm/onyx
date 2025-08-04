@@ -6,7 +6,7 @@ import gsap from 'gsap'
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export default function TransitionLink({ href, children, className }) {
+export default function TransitionLink({ href,setNavOpen, children, className }) {
     const Router = useTransitionRouter();
     const pathname = usePathname();
 
@@ -65,6 +65,7 @@ export default function TransitionLink({ href, children, className }) {
         <Link href={href} onClick={(e) => {
             e.preventDefault();
             if (pathname === href) return;
+            if (setNavOpen) setNavOpen(false);
             setTimeout(() => {
                 Router.push(href, {
                     onTransitionReady: animation

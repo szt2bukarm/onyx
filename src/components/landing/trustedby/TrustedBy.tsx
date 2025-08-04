@@ -49,7 +49,7 @@ export default function TrustedSection() {
     }, []);
 
     return (
-      <div data-gsap="trusted" className="bg-white min-w-full py-[120px] px-[40px] flex flex-col items-center text-center md:px-[80px]">
+      <div data-gsap="trusted" className="bg-white min-w-full py-[48px] md:py-[120px] px-[24px] flex flex-col items-center text-center md:px-[80px]">
         <h5 className="text-h5 leading-h5 font-regular mb-[32px]">Trusted and used by the best</h5>
         <div className="flex flex-wrap items-center justify-center gap-x-[40px] gap-y-[16px]">
           {Array.from({ length: 20 }).map((_, i) => {

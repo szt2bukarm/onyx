@@ -3,7 +3,7 @@ import InlineLink from "../common/InlineLink";
 export default function FooterActions() {
     return (
         <div className="flex flex-col md:flex-row md:gap-0 gap-[64px] justify-between pb-[32px] mb-[48px] border-b border-white/10">
-            <div className="flex flex-col lg:flex-row gap-[48px]">
+            <div className="flex flex-col lg:flex-row gap-[24px] lg:gap-[48px]">
                 <div className="flex items-center gap-[24px]">
                     <div className="h-[52px] w-[52px] flex items-center justify-center bg-onyx-500">
                         <img src="logoletters/o-black.svg" alt="letter o from ONYX logo" className="h-[24px]" />

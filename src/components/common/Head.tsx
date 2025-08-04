@@ -47,7 +47,7 @@ export default function Head({label,subtext,children} : {label: string, subtext:
 
 
     return (
-        <div className="p-[20px] sm:p-[80px] flex flex-col gap-[32px] xl:gap-[200px] xl:flex-row py-[120px] sm:pt-[128px] justify-between bg-neutral-800">
+        <div className="p-[24px] sm:px-[80px] flex flex-col gap-[24px] xl:gap-[200px] xl:flex-row sm:pb-[80px] pb-[24px] pt-[148px] justify-between bg-neutral-800">
 
         {/* left */}
         <div className="lg:w-[70%] xl:min-w-[55%]">
@@ -57,7 +57,7 @@ export default function Head({label,subtext,children} : {label: string, subtext:
             </div>
 
             {/* text */}
-            <div ref={textRef} className="flex flex-col font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 md:text-h2 md:leading-h2 xl:text-[3vw] xl:leading-[3.5vw] text-white tracking-[-1px]">{children}</div>
+            <div ref={textRef} className="flex flex-col font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 md:text-h2 md:leading-h2 xl:text-[3vw] xl:leading-[3.5vw] text-white tracking-[-1px]">{children}</div>
         </div>
 
         {/* right */}
