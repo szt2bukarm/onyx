@@ -2,7 +2,7 @@ import OurMissionNumbers from "./OurMissionNumbers";
 
 export default function OurMission() {
     return (
-        <div className="px-[20px] sm:px-[80px] pt-[60px] md:pt-[120px] pb-[60px] flex flex-col gap-[64px]">
+        <div className="section-padding sm:!pb-[60px] flex flex-col gap-[64px]">
 
             {/* Our mission image + text */}
             <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[80px] h-fit overflow-hidden">
@@ -10,7 +10,7 @@ export default function OurMission() {
                 <div className="lg:min-w-[35%] min-h-[500px] lg:min-h-fit bg-neutral-800 bg-cover bg-[url('/ourmission-bgimage.jpg')] bg-center">
                 </div>
 
-                <div className="flex flex-col gap-[32px] lg:gap-[56px]">
+                <div className="flex flex-col gap-[56px]">
 
                     <div className="w-full">
                         <p className="font-regular text-h3 leading-h3 tracking-[-1px] text-neutral-800 mb-[32px]">Our Mission</p>

@@ -21,7 +21,7 @@ export default function RecentBreachesWarning() {
 
     return (
         <div className="py-[56px] px-[20px]">
-            <p className="text-center font-regular text-h4 leading-h4  xl:text-h3 xl:leading-h3 text-white mb-[8px]">The data breaches of the AI era will be invariably larger.</p>
+            <p className="text-center font-regular text-h4 leading-h4 xl:text-h3 xl:leading-h3 text-white mb-[8px]">The data breaches of the AI era will be invariably larger.</p>
             <p ref={textRef} className="text-center font-regular text-h4 leading-h4 xl:text-h3 xl:leading-h3 text-onyx-500">Be protected.</p>
         </div>
     )

@@ -49,17 +49,17 @@ export default function RecentBreachesFines() {
     },[])
 
     return (
-        <div className="pt-[80px] pb-[64px] flex flex-col xl:flex-row xl:items-center gap-[30px] xl:gap-[112px]">
+        <div className="pt-[80px] pb-[64px] flex flex-col-reverse xl:flex-row xl:items-center gap-[30px] xl:gap-[112px]">
 
 
             {/* left */}
             <div>
                 {/* label */}
                 <div className="flex items-center justify-center p-[10px] bg-onyx-500 mb-[24px] w-fit">
-                    <p className="font-medium text-sm leading-sm text-neutral-800 translate-y-[2px] translate-x-[1px]">Zero day retention means risk for your organization</p>
+                    <p className="font-medium text-sm leading-sm text-neutral-800 translate-y-[2px] translate-x-[1px] uppercase">Zero day retention means risk for your organization</p>
                 </div>
                 {/* heading */}
-                <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white">Recent (Pre-AI) Data Breaches, Fines, Penalties</Heading>
+                <Heading className="font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white">Recent (Pre-AI) Data Breaches, Fines, Penalties</Heading>
             </div>
 
             {/* right */}

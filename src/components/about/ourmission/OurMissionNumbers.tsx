@@ -1,6 +1,6 @@
 export default function OurMissionNumbers() {
     return (
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-[52px]">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-[24px] sm:gap-[52px]">
 
             <div className="flex flex-col">
                 <p className="text-regular text-[56px] xl:text-[88px] text-neutral-800">200+</p>

@@ -44,7 +44,7 @@ export default function LargeTextBox({label,links,children} : {label: string, li
     },[])
 
     return (
-    <div className="flex flex-col lg:flex-row gap-[40px] items-start">
+    <div className="flex flex-col lg:flex-row gap-[24px] lg:gap-[40px] items-start">
 
         {/* label */}
         <div ref={labelRef} className="flex items-center justify-center p-[10px] translate-y-1 bg-onyx-500 md:mb-[16px] min-w-fit">
@@ -52,7 +52,7 @@ export default function LargeTextBox({label,links,children} : {label: string, li
         </div>
 
         <div className="flex flex-col">
-            <div ref={textRef} className="font-regular text-h5 leading-h5 sm:text-h4 sm:leading-h4 lg:text-h3 lg:leading-h3">{children}</div>
+            <div ref={textRef} className="font-regular text-h4 leading-h4 lg:text-h3 lg:leading-h3">{children}</div>
 
             {links && (
                 <div className="w-full border-t-1 border-neutral-200 flex gap-[24px] sm:gap-[48px] pt-[32px] mt-[40px] flex-wrap">

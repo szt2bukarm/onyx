@@ -2,7 +2,7 @@
 
 export default function FeatureListWhyPrivacy() {
     return (
-        <div className="px-[20px] sm:px-[80px] pt-[60px] sm:pt-[120px] pb-[32px] sm:pb-[120px] flex flex-col-reverse lg:flex-row gap-[48px] lg:gap-[120px] justify-between">
+        <div className="section-padding flex flex-col-reverse lg:flex-row gap-[48px] lg:gap-[120px] justify-between">
 
             {/* left */}
             <div className="flex flex-col gap-[32px] sm:gap-[48px] lg:w-[75%]">

@@ -19,9 +19,9 @@ const cards = [
 
 export default function NoSwitchingCost() {
     return (
-        <div className="px-[20px] sm:px-[80px] pt-[80px] sm:pt-[120px] pb-[60px] sm:pb-[120px] bg-white flex flex-col gap-[48px]">
+        <div className="section-padding bg-white flex flex-col gap-[24px] sm:gap-[48px]">
 
-            <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800">No switching cost:</Heading>
+            <Heading className="font-regular text-mobileheading leading-mobiletext-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800">No switching cost:</Heading>
 
             <div className="flex flex-col lg:flex-row gap-[16px]">
                 {cards.map((card, index) => (

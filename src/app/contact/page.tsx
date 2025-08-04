@@ -24,7 +24,7 @@ export default function Page() {
                 <span>Get in Touch</span>
             </Head>
 
-            <div className="px-[20px] sm:px-[80px] py-[80px]">
+            <div className="px-[24px] sm:px-[80px] py-[48px]">
                 
                 <div className="flex flex-col lg:flex-row lg:justify-between mb-[32px]">
 

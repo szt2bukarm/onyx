@@ -82,7 +82,7 @@ export default function LeadershipTeam() {
         <p className="font-regular text-lg leading-lg text-neutral-700 mb-[48px]">Real AI meets cryptography. Our team is a hybrid of leaders from both industries.</p>
 
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-[24px] gap-y-[32px] xl:gap-x-[44px] xl:gap-y-[32px] flex-wrap">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-[44px] sm:gap-x-[24px] sm:gap-y-[32px] xl:gap-x-[44px] xl:gap-y-[32px] flex-wrap">
         {data.map((person, index) => (
             <div key={index} className="flex flex-col items-start">
                 <img src={`about/${person.image}`} className=" mb-[20px]" />

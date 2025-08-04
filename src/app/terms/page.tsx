@@ -11,9 +11,9 @@ export default function Page() {
                 <span>Terms and Conditions</span>
             </Head>
 
-            <div className="px-[20px] sm:px-[80px] py-[80px] flex gap-[80px]">
+            <div className="px-[24px] sm:px-[80px] py-[48px] flex flex-col lg:flex-row gap-[48px] lg:gap-[80px]">
 
-                <div className="p-[40px] bg-creambg hidden lg:flex flex-col min-w-[305px] h-fit sticky top-[120px]">
+                <div className="p-[40px] bg-creambg flex flex-col min-w-[305px] h-fit lg:sticky top-[120px]">
                     <p className="font-medium text-sm leading-sm text-neutral-800 mb-[20px]">TABLE OF CONTENTS</p>
                     <div className="flex flex-col gap-[10px]">
                         <a href="#our-services" className="font-regular text-sm leading-sm text-neutral-700">Our Services</a>

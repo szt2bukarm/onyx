@@ -1,6 +1,6 @@
 export default function FeatureListVeil() {
     return (
-        <div className="px-[20px] sm:px-[80px] pb-[120px] flex flex-col gap-[48px]">
+        <div className="section-padding !pt-0 bg-creambg flex flex-col gap-[48px]">
 
             <div className="flex flex-col gap-[48px]">
                 <div className="flex flex-col lg:flex-row justify-between">

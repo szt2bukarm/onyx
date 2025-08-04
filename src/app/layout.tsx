@@ -47,7 +47,7 @@ export default function RootLayout({
         <Nav />
         <SmoothScroll>
           <div data-gsap="page">
-          {children}
+            {children}
           </div>
         </SmoothScroll>
       </body>

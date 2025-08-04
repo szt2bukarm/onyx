@@ -10,6 +10,7 @@ import JoinOnyx from "@/components/common/joinonyx/JoinOnyx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
+import VeilAccuracy from "@/components/veil/veilAccuracy/VeilAccuracy";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
@@ -29,7 +30,10 @@ export default function Page() {
 
             <Protects />
             <FeatureList />
+            <VeilAccuracy />
             <Guardrails />
+
+            <p className="px-[24px] py-[48px] font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 text-center text-black">Your invisible privacy companion that’s your last line of defense.</p>
 
             <JoinOnyx />
         </main>

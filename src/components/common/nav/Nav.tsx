@@ -37,7 +37,7 @@ export default function Nav() {
 
         gsap.to("[data-gsap='page']", {
             opacity: 0.1,
-            y: "20vh",
+            y: "25vh",
             duration: 0.5,
             ease: "out"
         })
@@ -64,6 +64,7 @@ export default function Nav() {
             opacity: 1,
             y: 0,
             duration: 0.3,
+            delay: 0.1,
             onComplete: () => {
                 ScrollTrigger.refresh()
             }
@@ -71,8 +72,21 @@ export default function Nav() {
     }
 
     useEffect(() => {
-        document.documentElement.style.overflowY = open ? "hidden" : "auto";
-    },[open])
+        const html = document.documentElement;
+    
+        if (open) {
+            html.style.overflow = "hidden";
+            html.style.touchAction = "none";
+        } else {
+            html.style.overflow = "";
+            html.style.touchAction = "";
+        }
+    
+        return () => {
+            html.style.overflow = "";
+            html.style.touchAction = "";
+        }
+    }, [open])
 
     useGSAP(() => {
         gsap.fromTo("[data-gsap='nav']", {y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1,delay: 0.5, ease: "out"})
@@ -81,7 +95,7 @@ export default function Nav() {
     return (
         <>
         <nav data-gsap="nav" className="z-100 bg-neutral-800 w-screen fixed" style={{viewTransitionName: "nav"}}>
-            <div className="relative w-full flex justify-between items-center md:px-[80px] px-[20px] py-[24px]">
+            <div className="relative w-full flex justify-between items-center sm:px-[80px] px-[20px] py-[24px]">
 
             <div className="z-100 w-full lg:w-auto items-center flex flex-row justify-between lg:justify-start gap-0  lg:gap-[32px]">
                 <button className="z-1 relative w-[40px] h-[40px] bg-onyx-500 cursor-pointer" onClick={handleToggle}>

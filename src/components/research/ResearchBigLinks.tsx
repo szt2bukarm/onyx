@@ -2,7 +2,7 @@ import InlineLink from "../common/InlineLink";
 
 export default function ResearchBigLinks() {
     return (
-        <div className="px-[20px] sm:px-[80px] pt-[60px] sm:pt-[80px] pb-[60px] flex flex-col gap-[32px] bg-creambg">
+        <div className="px-[24px] sm:px-[80px] pt-[48px] sm:pt-[80px] pb-[48px] flex flex-col gap-[32px] bg-creambg">
 
             <div className="flex flex-col lg:flex-row justify-between">
 

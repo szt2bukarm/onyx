@@ -439,7 +439,7 @@ export default function Page() {
         if (scrollTargetRef.current && window.scrollY > scrollTargetRef.current.offsetTop) {
             lenis?.stop();
             setTimeout(() => {
-                window.scrollTo(0, scrollTargetRef.current.offsetTop - (windowWidth > 1440 ? 120 : windowWidth > 640 ? 65 : 60));
+                window.scrollTo(0, scrollTargetRef.current.offsetTop - (windowWidth > 1440 ? 120 : 65));
                 lenis?.start();
             }, 1);
         }
@@ -486,16 +486,16 @@ export default function Page() {
                 <span>Onyx Privacy is built for Enterprise work.</span>
             </Head>
 
-            <div className="px-[20px] xl:px-[144px] pt-[60px] sm:pt-[120px]">
-                <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[40px] lg:w-[70%]">
+            <div className="px-[24px] xl:px-[144px] pt-[48px] sm:pt-[120px]">
+                <Heading className="font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[40px] lg:w-[70%]">
                     Let Onyx save you time, money, and get the job done with ease.
                 </Heading>
                 
                 <div ref={scrollTargetRef}></div>
 
-                <div className="grid xl:grid-cols-[auto_1fr] gap-[40px] xl:gap-[80px] pb-[40px] sm:pb-[120px]">
+                <div className="grid xl:grid-cols-[auto_1fr] gap-[40px] xl:gap-[80px] pb-[48px] sm:pb-[120px]">
                     {/* Sticky sidebar */}
-                    <div className="z-10 flex xl:flex-col overflow-x-auto xl:flex-wrap gap-[6px] h-min sticky top-[65px] md:top-[95px] py-[20px] xl:p-0 bg-white xl:bg-transparent xl:top-[120px]">
+                    <div className="z-10 flex xl:flex-col overflow-x-auto xl:flex-wrap gap-[6px] h-min sticky top-[85px] lg:top-[95px] py-[20px] xl:p-0 bg-white xl:bg-transparent xl:top-[120px]">
                         {tags.map((tag, index) => (
                             <div 
                                 key={index} 

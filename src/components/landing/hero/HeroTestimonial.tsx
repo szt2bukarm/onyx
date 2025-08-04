@@ -2,6 +2,11 @@
 import TestimonialCard from "../../common/TestimonialCard"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 
 const data = [
     {
@@ -30,11 +35,55 @@ export default function HeroTestimonial() {
     },[])
 
     return (
-        <div data-gsap="hero-testimonial" className="xl:grid xl:grid-cols-2 xl:grid-rows-2 xxl:w-[700px] xxl:h-[650px] xl:ml-auto lg:flex">
+        <div data-gsap="hero-testimonial">
+        <div className="hidden xl:grid xl:grid-cols-2 xl:grid-rows-2 xxl:w-[700px] xxl:h-[650px] xl:ml-auto">
             <div></div>
             {data.map((item,index) => (
                 <TestimonialCard key={index} transform={true} text={item.text} name={item.name} image={item.image} role={item.role} index={index} border theme="black"/>
             ))}
+        </div>
+
+        <div className="block xl:hidden">
+        <Swiper
+                modules={[Navigation,Autoplay]}
+                slidesPerView={1.1}
+                autoplay={{
+                    delay: 10000,
+                    disableOnInteraction: false
+                }}
+                breakpoints={{
+                    1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                    },
+                    0: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 0,
+                    },
+                }}
+                loop
+                spaceBetween={0} 
+                wrapperClass="!overflow-visible"
+                className="!min-h-full !overflow-visible"
+                >
+                    {data.map((item, index) => (
+                        <SwiperSlide key={index} className="!h-auto">
+                            <div className="!h-full w-full">
+                                <TestimonialCard
+                                    border
+                                    text={item.text}
+                                    name={item.name}
+                                    image={item.image}
+                                    role={item.role}
+                                    index={index}
+                                    theme="black"
+                                />
+                            </div>
+                        </SwiperSlide>
+                    ))}
+
+            </Swiper>     
+        </div>
         </div>
     )
 }

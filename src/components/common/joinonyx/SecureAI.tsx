@@ -23,7 +23,7 @@ export default function SecureAI() {
         <div className="flex flex-col xl:w-[50%] mb-[48px]">
 
             <div>
-                <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white mb-[72px]">Secure AI without compromises.</Heading>
+                <Heading className="font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white mb-[72px]">Secure AI without compromises.</Heading>
             </div>
 
             <div className="flex flex-col gap-[48px]">

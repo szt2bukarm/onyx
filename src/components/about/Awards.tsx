@@ -143,7 +143,7 @@ export default function Awards() {
     useFadeInStagger(cardsRef);
 
     return (
-        <div className="px-[20px] sm:px-[80px] pt-[60px] pb-[120px] bg-white">
+        <div className="px-[24px] sm:px-[80px] pt-[48px] pb-[48px] sm:pb-[120px] bg-white">
             <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[50px] text-center">Award winning AI research</Heading>
 
             <div className="hidden w-full items-center justify-center xl:flex flex-col gap-[4vw] flex-wrap">

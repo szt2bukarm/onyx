@@ -30,12 +30,12 @@ const cards = [
 export default function AttackVectors() {
 
     return (
-        <div className="px-[20px] sm:px-[80px]  pt-[80px] flex flex-col bg-neutral-800">
+        <div className="px-[24px] sm:px-[80px] pt-[48px] sm:pt-[80px] flex flex-col bg-neutral-800">
 
         <div className="pb-[64px] flex flex-col xl:flex-row gap-[40px] xl:gap-[112px] ">
 
             <div className="flex flex-col gap-[24px] xl:w-[50%]">
-                <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white">Attack Vectors on Onyx</Heading>
+                <Heading className="font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white">Attack Vectors on Onyx</Heading>
                 <p className="font-regular text-lg leading-lg text-neutral-100">Equivariant Encryption (EE) security has been battle tested with various baseline attack vectors.</p>
                 <Button variant="white">FULL ATTACK PAPER</Button>
             </div>

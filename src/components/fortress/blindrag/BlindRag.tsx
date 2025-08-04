@@ -2,6 +2,10 @@ import Heading from "@/components/common/Heading";
 import InlineLink from "@/components/common/InlineLink";
 import { useFadeInStagger } from "@/hooks/useFadeInStagger";
 import { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const links = ["See the research", "See the security proofs"]
 
@@ -10,19 +14,50 @@ export default function BlindRag() {
     useFadeInStagger(cardsRef);
 
     return (
-        <div className="px-[20px] sm:px-[80px] pt-[60px] md:pt-[120px] pb-[20px] sm:pb-[120px] bg-neutral-800 flex flex-col gap-[40px]">
+        <div className="section-padding bg-neutral-800 flex flex-col gap-[40px]">
 
             {/* header */}
-            <div className="flex flex-col gap-[8px] lg:flex-row lg:gap-0 justify-between">
-                <Heading className="font-regular text-h4 leading-h4 sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white">Blind Rag</Heading>
+            <div className="flex flex-col gap-[24px] sm:gap-[8px] lg:flex-row lg:gap-0 justify-between">
+                <Heading className="font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-white">Blind Rag</Heading>
                 <p className="font-regular text-lg leading-lg text-neutral-100 lg:w-[600px]">Onyx Fortress maintains all RAG insertions after inference under the same end-to-end cloak of encryption.</p>
             </div>
 
             {/* screenshots */}
-            <div className="flex flex-col lg:flex-row gap-[20px]">
-                <img src="blindragScreenshots/1.png" className="w-full lg:w-[calc(50%-10px)] rounded-[16px] border-1 border-[#2D2D2D]" />
-                <img src="blindragScreenshots/2.png" className="w-full lg:w-[calc(50%-10px)] rounded-[16px] border-1 border-[#2D2D2D]" />
-            </div>
+            <Swiper
+                    modules={[Navigation]}
+                    slidesPerView={1}
+                    breakpoints={{
+                        1440: {
+                          slidesPerView: 2,
+                          spaceBetween: 26, 
+                        },
+                        0: {
+                          slidesPerView: 1.03,
+                          spaceBetween: 10,
+                        },
+                      }}
+                    spaceBetween={20}
+                    className="lg:!h-auto !w-full !overflow-visible"
+                    wrapperClass="!overflow-visible"
+                    >
+                    <SwiperSlide>
+                        <div className="rounded-[8px] md:rounded-[16px] overflow-hidden border-1 border-[#2D2D2D]">
+                            <img
+                            src="blindragScreenshots/1.png"
+                            className="w-full object-cover"
+                            />
+                        </div>
+                      </SwiperSlide>
+                    <SwiperSlide>
+                    <div className="rounded-[8px] md:rounded-[16px] overflow-hidden border-1 border-[#2D2D2D]">
+                        <img
+                        src="blindragScreenshots/2.png"
+                        className="w-full object-cover"
+                        />
+                    </div>
+                    </SwiperSlide>
+                </Swiper>
+
 
             {/* logos */}
             <div className="w-full">
