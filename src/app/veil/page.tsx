@@ -3,12 +3,12 @@ import Head from "@/components/common/Head";
 import Footer from "@/components/footer/Footer";
 import FeatureList from "@/components/veil/featurelistveil/FeatureListVeil";
 import Guardrails from "@/components/veil/guardrails/Guardrails";
-import Protects from "@/components/veil/protects/Protects";
 import JoinOnyx from "@/components/common/joinonyx/JoinOnyx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import VeilAccuracy from "@/components/veil/veilAccuracy/VeilAccuracy";
+import Protects from "@/components/veil/protects/Protects";
 
 gsap.registerPlugin(ScrollTrigger);
 
