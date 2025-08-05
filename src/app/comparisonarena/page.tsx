@@ -20,7 +20,7 @@ export default function Page() {
     }, []);
     return (
         <>
-        <div className="w-full h-full bg-white">
+        <div className="w-full h-full bg-white overflow-x-hidden">
             <Head label="Comparison Arena" subtext="Onyx is the most performant and most complete solution for practical and scalable privacy-preserving AI inference.">
                 <span>How Onyx stacks up against the top privacy solutions</span>
             </Head>

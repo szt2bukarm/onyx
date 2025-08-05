@@ -7,7 +7,7 @@ export default function OurMission() {
             {/* Our mission image + text */}
             <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[80px] h-fit overflow-hidden">
                 
-                <div className="lg:min-w-[35%] min-h-[500px] lg:min-h-fit bg-neutral-800 bg-cover bg-[url('/ourmission-bgimage.jpg')] bg-center">
+                <div className="lg:min-w-[35%] min-h-[500px] lg:min-h-fit bg-neutral-800 bg-cover bg-[url('/ourmission-bgimage.webp')] bg-center">
                 </div>
 
                 <div className="flex flex-col gap-[56px]">

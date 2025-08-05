@@ -8,6 +8,10 @@ import Footer from "@/components/footer/Footer";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import EncryptsEverything from "@/components/firewall/encryptseverything/EncryptsEverything";
+import KeepsYouSafe from "@/components/firewall/keepsyousafe/KeepsYouSafe";
+import FirewallFlow from "@/components/firewall/firewallflow/FirewallFlow";
+import AccountDiagrams from "@/components/firewall/accountdiagrams/AccountDiagrams";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
@@ -20,12 +24,16 @@ export default function Page() {
 
     return (
         <>
-        <main className="w-full h-full bg-white">
+        <main className="w-full h-full bg-white overflow-x-hidden">
             <Head label="ONYX FIREWALL" subtext="Onyx Firewall, powered by the breakthrough privacy technology Equivariant Encryption, gives you total peace of mind.">
                 <span>Keep your AI queries encrypted.</span>
                 <span className="text-onyx-500">Protect your data.</span>
             </Head>
+
+            <EncryptsEverything />
             <DataLeaks />
+            <KeepsYouSafe />
+            <FirewallFlow />
             <NoSwitchingCost />
             <div className="px-[24px] sm:px-[80px] pb-[48px] md:pb-[120px]">
                 <LargeTextBox label="FOR LARGE TEAMS" links={["See the research", "See the security proofs"]}>
@@ -37,6 +45,8 @@ export default function Page() {
         
                 </LargeTextBox>
             </div>
+
+            <AccountDiagrams />
             <Trusted />
         </main>
 

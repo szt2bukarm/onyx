@@ -20,7 +20,7 @@ export default function Page() {
 
     return (
         <>
-            <main className="w-full h-full bg-white">
+            <main className="w-full h-full bg-white overflow-x-hidden">
 
                 <Head label="OUR STORY" subtext="">
                     <span>The Nesa Team</span>

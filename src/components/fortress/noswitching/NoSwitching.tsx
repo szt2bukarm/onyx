@@ -14,6 +14,9 @@ export default function NoSwitching() {
 
     return (
         <div className="section-padding bg-white">
+
+            <img src="fortress/fortress-flow-2.webp" className="w-full mb-[24px] sm:mb-[64px]" />
+
             <Heading className="font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[24px] sm:mb-[64px]">No Switching<br></br>Stay on your same cloud provider</Heading>
 
             <div className="w-full">

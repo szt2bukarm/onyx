@@ -72,11 +72,11 @@ export default function FooterNav() {
                </div>
             </div>
             <div data-gsap="footer-nav-5" className="flex flex-wrap gap-[24px] sm:col-span-2 lg:col-span-4 xl:col-span-1 xl:mt-0">
-                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/ISO 27001.png" alt="ISO 27001" />
-                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/SOC2 Type 2.png" alt="SOC2 Type 2" />
-                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/GDPR.png" alt="GDPR" />
-                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/CSA STAR.png" alt="CSA STAR" />
-                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/HIPPAA.png" alt="HIPPAA" />
+                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/ISO 27001.webp" alt="ISO 27001" />
+                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/SOC2 Type 2.webp" alt="SOC2 Type 2" />
+                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/GDPR.webp" alt="GDPR" />
+                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/CSA STAR.webp" alt="CSA STAR" />
+                <img className="w-[60px] h-[60px] md:w-[96px] md:h-[96px]" src="badges/HIPPAA.webp" alt="HIPPAA" />
             </div>
         </div>
     )

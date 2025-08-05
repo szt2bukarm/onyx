@@ -20,7 +20,7 @@ export default function Page() {
 
     return (
         <>
-            <main className="w-full h-full bg-white">
+            <main className="w-full h-full bg-white overflow-x-hidden">
         
                 <Head label="TECH RESEARCH" subtext="Our proprietary research in cryptography and AI. A small selection of papers authored by Nesa's founders.">
                     <span>Onyx Research</span>

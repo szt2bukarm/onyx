@@ -31,9 +31,9 @@ export default function Encrypt() {
                 </div>
             </div>
 
-            <div className="h-auto lg:h-[360px] flex gap-[24px] flex-col lg:flex-row mt-[80px]">
-                <EncryptCard header="competition" headerColor="#000" text="Show how all others only keep data encrypted at rest and transit, but fully reveal it in plain text at point of inference."/>
-                <EncryptCard header="onyx" headerColor="#FF4A40" text="Show how we keep data encrypted at points of rest, transit AND fully encrypted still at point of inference"/>
+            <div className="flex gap-[24px] flex-col lg:flex-row mt-[80px]">
+                <EncryptCard header="competition" headerColor="#000" text="Show how all others only keep data encrypted at rest and transit, but fully reveal it in plain text at point of inference." illustration="landing/vanilla-model-inference.webp"/>
+                <EncryptCard header="onyx" headerColor="#FF4A40" text="Show how we keep data encrypted at points of rest, transit AND fully encrypted still at point of inference" illustration="landing/ee.webp"/>
             </div>
         </div>
     )

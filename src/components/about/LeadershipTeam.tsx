@@ -4,72 +4,72 @@ const data = [
     {
         name: "Dr. Harry Yang",
         title: "Founder",
-        image: "drharryyang.png"
+        image: "drharryyang.webp"
     },
     {
         name: "Dr. Yue Zhao",
         title: "Founder",
-        image: "dryuezhao.png"
+        image: "dryuezhao.webp"
     },
     {
         name: "Dr. Claudio Angione",
         title: "Chief of Research",
-        image: "drclaudioangione.png"
+        image: "drclaudioangione.webp"
     },
     {
         name: "Dr. Marco Di Maggio",
         title: "Founder",
-        image: "drmarcodimaggio.png"
+        image: "drmarcodimaggio.webp"
     },
     {
         name: "Patrick Colangelo",
         title: "Founder",
-        image: "patrickcolangelo.png"
+        image: "patrickcolangelo.webp"
     },
     {
         name: "Dr. Xiaofan Liu",
         title: "Founder",
-        image: "drxiaofanliu.png"
+        image: "drxiaofanliu.webp"
     },
     {
         name: "Dr. Hongyang Zhang",
         title: "Chief of Security",
-        image: "drhongyangzhang.png"
+        image: "drhongyangzhang.webp"
     },
     {
         name: "Alan Boehme",
         title: "Chief of Platform",
-        image: "alanboehme.png"
+        image: "alanboehme.webp"
     },
     {
         name: "Fielding Johnston",
         title: "VP of Engineering",
-        image: "fieldingjohnston.png"
+        image: "fieldingjohnston.webp"
     },
     {
         name: "Dr. James Buban",
         title: null,
-        image: "drjamesbuban.png"
+        image: "drjamesbuban.webp"
     },
     {
         name: "Dr. Jason Chen",
         title: null,
-        image: "drjasonchen.png"
+        image: "drjasonchen.webp"
     },
     {
         name: "Ahmad Farhan",
         title: null,
-        image: "ahmadfarhan.png"
+        image: "ahmadfarhan.webp"
     },
     {
         name: "Dr. Elvin Yao",
         title: null,
-        image: "drelvinyao.png"
+        image: "drelvinyao.webp"
     },
     {
         name: "Dr. Xiaofeng Liu",
         title: null,
-        image: "drxiaofengliu.png"
+        image: "drxiaofengliu.webp"
     },
 ]
 

@@ -5,6 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
 
 
 const models = [
@@ -80,15 +83,17 @@ export default function Protects() {
                             delay: 10000,
                             disableOnInteraction: false
                         }}
-                        className="!min-h-full !overflow-visible"
+                        className="!min-h-[140px] !overflow-visible"
                         wrapperClass="!overflow-visible"
                     >
                         {models.map((model, index) => (
-                            <SwiperSlide key={index} className="min-h-[140px] flex flex-col justify-between items-start p-[24px] bg-[#F2F2F2]">
+                            <SwiperSlide key={index} className="!h-auto">
+                            <div key={index} className="min-w-[140px] !min-h-full flex flex-col justify-between items-start p-[24px]  bg-[#F2F2F2] flex-1">
                                 <div className="flex items-center justify-center w-[44px] h-[44px] overflow-hidden p-[2px] rounded-[12px] shadow-[0px_16px_32px_-4px_rgba(0,0,0,0.15)] border-1 border-[#EDE6DF] mb-3">
                                     <img src={`models/${model.file}`} className="h-full w-full object-contain rounded-[12px] bg-white"/>
                                 </div>
                                 <p className="font-medium text-lg leading-lg text-neutral-700 word-break">{model.name}</p>
+                            </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -97,8 +102,9 @@ export default function Protects() {
 
             </div>
 
-            <img src="veil/veilScreenshot.png" className="w-full rounded-[8px] md:rounded-[16px]" />
-
+            <Zoom classDialog="custom-zoom">
+            <img src="veil/veilScreenshot.webp" className="w-full rounded-[8px] md:rounded-[16px]" />
+            </Zoom>
         </div>
 
     )

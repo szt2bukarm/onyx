@@ -129,3 +129,23 @@ html {
   background-color: var(--color-onyx-500);
   color: #FFF;
 }
+
+.custom-zoom [data-rmiz-modal-overlay],
+.custom-zoom [data-rmiz-modal-img] {
+  transition-duration: 0.15s !important;
+  transition-timing-function: ease-out !important;
+}
+.custom-zoom [data-rmiz-modal-overlay="hidden"] {
+  background-color: rgba(255, 255, 255, 0) !important; 
+}
+.custom-zoom [data-rmiz-modal-overlay="visible"] {
+  background-color: rgba(255, 255, 255, 0.85) !important; 
+}
+.custom-zoom [data-rmiz-btn-unzoom] {
+  background-color: #ffffffda !important; 
+  color: #000 !important; 
+}
+.custom-zoom [data-rmiz-btn-unzoom]:focus-visible {
+  outline-offset: 0.4rem !important; 
+  outline: 0.2rem solid #000000 !important; 
+}

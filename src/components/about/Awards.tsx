@@ -8,133 +8,133 @@ const data = [
         placement: "Winner",
         text: "Alan Turing",
         subtext: "Development Award",
-        image: "alan-turing.png"
+        image: "alan-turing.webp"
     },
     {
         placement: "1st Place",
         text: "NeurIPS",
         subtext: "Robust Model Track",
-        image: "neurips1.png"
+        image: "neurips1.webp"
     },
     {
         placement: "1st Place",
         text: "NeurIPS",
         subtext: "Targeted Attacks Track",
-        image: "neurips2.png"
+        image: "neurips2.webp"
     },
     {
         placement: "1st Place",
         text: "CVPR",
         subtext: "Security AI Challenge",
-        image: "cvpr.png"
+        image: "cvpr.webp"
     },
     {
         placement: "1st Place",
         text: "Google",
         subtext: "Adversarial Challenge",
-        image: "google1.png"
+        image: "google1.webp"
     },
     {
         placement: "Winner",
         text: "Google",
         subtext: "Cloud Security Award",
-        image: "google2.png"
+        image: "google2.webp"
     },
     {
         placement: "Winner",
         text: "Meta’s",
         subtext: "AI4AI Award",
-        image: "metas.png"
+        image: "metas.webp"
     },
     {
         placement: "10 Time+",
         text: "ICML",
         subtext: "Acceptance Submission",
-        image: "icml.png"
+        image: "icml.webp"
     },
     {
         placement: "20 Time+",
         text: "IEEE",
         subtext: "Acceptance Submission",
-        image: "ieee.png"
+        image: "ieee.webp"
     },
     {
         placement: "15 Time+",
         text: "Area Chair",
         subtext: "for ML Committee, for TCS",
-        image: "area-chair.png"
+        image: "area-chair.webp"
     },
     {
         placement: "3 Time",
         text: "ICLR",
         subtext: "Acceptance Submission",
-        image: "iclr.png"
+        image: "iclr.webp"
     },
     {
         placement: "Top 0.002%",
         text: "Github",
         subtext: "Stars Ranking for Open Source",
-        image: "github.png"
+        image: "github.webp"
     },
     {
         placement: "Winner",
         text: "Norton",
         subtext: "Fellowship Program Award",
-        image: "norton.png"
+        image: "norton.webp"
     },
     {
         placement: "Winner",
         text: "WiSE Merit",
         subtext: "Postdoctural Ethereum L2s",
-        image: "wise-merit.png"
+        image: "wise-merit.webp"
     },
     {
         placement: "Accepted",
         text: "ACM CCS",
         subtext: "Zero Knowledge Deep Learning",
-        image: "acm-ccs.png"
+        image: "acm-ccs.webp"
     },
     {
         placement: "Winner",
         text: "Embassy",
         subtext: "of Italy Award for Best Eng Research",
-        image: "embassy.png"
+        image: "embassy.webp"
     },
     {
         placement: "Winner",
         text: "Baidu",
         subtext: "PhD Scholar Award in AI",
-        image: "baidu.png"
+        image: "baidu.webp"
     },
     {
         placement: "Winner",
         text: "Nature Science",
         subtext: "10 Notable Advances Honor",
-        image: "nature-science.png"
+        image: "nature-science.webp"
     },
     {
         placement: "NAMED",
         text: "MIT EECS",
         subtext: "Rising Stars Honor",
-        image: "mit-eecs.png"
+        image: "mit-eecs.webp"
     },
     {
         placement: "2x",
         text: "AAAI",
         subtext: "New Faculty Highlights Honor",
-        image: "aaai.png"
+        image: "aaai.webp"
     },
     {
         placement: "Winner",
         text: "MIT-Takeda",
         subtext: "Fellowship PhD Award",
-        image: "mit-takeda.png"
+        image: "mit-takeda.webp"
     },
     {
         placement: "Winner",
         text: "World AI WAICO",
         subtext: "Rising Stars in AI Yunfan Award",
-        image: "world-ai-waico.png"
+        image: "world-ai-waico.webp"
     },
 ]
 

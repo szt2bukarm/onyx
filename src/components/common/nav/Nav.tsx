@@ -120,8 +120,8 @@ export default function Nav() {
 
             <div className="z-1 hidden lg:flex items-center">
                 <div className="space-x-[8px] mr-[32px]">
-                    <a className="cursor-pointer px-[8px] py-[16px] text-white hover:opacity-50 transition duration-150">RESEARCH</a>
-                    <a className="cursor-pointer px-[8px] py-[16px] text-white hover:opacity-50 transition duration-150">TEAM</a>
+                    <TransitionLink href={"/research"} className="cursor-pointer px-[8px] py-[16px] text-white hover:opacity-50 transition duration-150">RESEARCH</TransitionLink>
+                    <TransitionLink href={"/about"} className="cursor-pointer px-[8px] py-[16px] text-white hover:opacity-50 transition duration-150">TEAM</TransitionLink>
                     <a className="cursor-pointer px-[8px] py-[16px] text-white hover:opacity-50 transition duration-150">GITHUB</a>
                 </div>
                 <div className="hidden md:block">

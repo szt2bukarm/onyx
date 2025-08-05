@@ -27,7 +27,7 @@ export default function Page() {
     return (
         <>
         
-        <main className="w-full h-full bg-white">
+        <main className="w-full h-full bg-white overflow-x-hidden">
             <Head label="PRIVACY OVER EVERYTHING" subtext="AI privacy keeps your business and customers safe.">
                 <span>Privacy of your data is a critical part of your AI stack. Protect your most valuable resource.</span>
             </Head>

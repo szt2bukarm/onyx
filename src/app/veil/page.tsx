@@ -1,16 +1,15 @@
 "use client"
 import Head from "@/components/common/Head";
 import Footer from "@/components/footer/Footer";
-import EarlyAccessForm from "@/components/common/joinonyx/EarlyAccessForm";
 import FeatureList from "@/components/veil/featurelistveil/FeatureListVeil";
 import Guardrails from "@/components/veil/guardrails/Guardrails";
-import Protects from "@/components/veil/protects/protects";
-import SecureAI from "@/components/common/joinonyx/SecureAI";
+import Protects from "@/components/veil/protects/Protects";
 import JoinOnyx from "@/components/common/joinonyx/JoinOnyx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import VeilAccuracy from "@/components/veil/veilAccuracy/VeilAccuracy";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
@@ -23,7 +22,7 @@ export default function Page() {
 
     return (
     <>
-        <main className="w-full h-full bg-white">
+        <main className="w-full h-full bg-white overflow-x-hidden">
             <Head label="ONYX VEIL" subtext="Onyx Veil prevents threats and transforms identifying information from your prompts before sending them to centralized AI’s like ChatGPT.">
                 <span>If you use centralized AI, stay protected with Veil.</span>
             </Head>

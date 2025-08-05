@@ -95,7 +95,7 @@ export default function Saygoodbye({setStickyKey}: {setStickyKey: any}) {
                 <Video name="Guy Guy" role="Head of Global Technology, Procter and Gamble" showWatchVideo={false} buttonColor="primary" buttonSize="large"/>
             </div>
 
-              <div className="hidden xxl:block h-[600px] w-full mb-[80px] xxl:sticky xxl:top-[150px]" ref={videoRef}>
+              <div className="hidden xxl:block h-[600px] w-full mb-[80px] sticky top-[150px]" ref={videoRef}>
                   <div className="min-h-full w-[100%] bg-[url('/videoplaceholder.png')] bg-cover bg-center relative">
 
                   {/* big player */}

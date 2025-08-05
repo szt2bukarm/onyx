@@ -25,7 +25,10 @@ export default function HeroText() {
           { y: 0, duration: 1.5, stagger: 0.1, ease: "out" }
         );
       
+        let lastWidth = window.innerWidth;
         const handleResize = () => {
+          if (lastWidth == window.innerWidth) return;
+          lastWidth = window.innerWidth;
           split.revert(); 
           requestAnimationFrame(() => {
             split = new SplitText("[data-gsap='hero-text']", { type: "lines" });
@@ -50,7 +53,7 @@ export default function HeroText() {
       },[])
 
       useGSAP(() => {
-        const revealEls = ["[data-gsap='hero-logo-tm']","[data-gsap='hero-subtext']","[data-gsap='hero-cta']","[data-gsap='hero-testimonial']"]
+        const revealEls = ["[data-gsap='hero-logo-tm']","[data-gsap='hero-subtext']","[data-gsap='hero-cta']","[data-gsap='nesa-text']","[data-gsap='hero-testimonial']"]
         gsap.set(revealEls, {opacity: 0})
         gsap.to(
             revealEls,
@@ -70,6 +73,8 @@ export default function HeroText() {
                 <Button variant="secondary">GET THE API</Button>
                 </TransitionLink>
             </div>
+
+            <div className="flex flex-col w-fit">
             <div className="flex">
                 <div className="overflow-hidden md:h-[110px] h-[15.3vw]">
                     <img src="logoletters/o.svg" alt="letter o from ONYX logo" className="h-full" data-gsap="hero-logo-o" />
@@ -85,6 +90,9 @@ export default function HeroText() {
                 </div>
                 <img src="logoletters/tm.svg" alt="Registered Trademark" className="h-[15px] -translate-y-3" data-gsap="hero-logo-tm" />
             </div>
+                <p data-gsap="nesa-text" className="font-bold text-neutral-100 text-sm text-right mr-5 mt-2">POWERED BY NESA</p>
+            </div>
+
         </div>
     )
 }

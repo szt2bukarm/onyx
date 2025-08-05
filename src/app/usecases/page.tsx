@@ -481,7 +481,7 @@ export default function Page() {
 
     return (
         <>
-        <main className="w-full h-full bg-white">
+        <main className="w-full h-full bg-white overflow-x-hidden">
             <Head label="USE CASES" subtext="">
                 <span>Onyx Privacy is built for Enterprise work.</span>
             </Head>

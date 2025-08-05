@@ -6,6 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
 
 const links = ["See the research", "See the security proofs"]
 
@@ -41,20 +44,24 @@ export default function BlindRag() {
                     wrapperClass="!overflow-visible"
                     >
                     <SwiperSlide>
+                        <Zoom classDialog="custom-zoom">
+                            <div className="rounded-[8px] md:rounded-[16px] overflow-hidden border-1 border-[#2D2D2D]">
+                                <img
+                                src="blindragScreenshots/1.png"
+                                className="w-full object-cover"
+                                />
+                            </div>
+                        </Zoom>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                    <Zoom classDialog="custom-zoom">
                         <div className="rounded-[8px] md:rounded-[16px] overflow-hidden border-1 border-[#2D2D2D]">
                             <img
-                            src="blindragScreenshots/1.png"
+                            src="blindragScreenshots/2.png"
                             className="w-full object-cover"
                             />
                         </div>
-                      </SwiperSlide>
-                    <SwiperSlide>
-                    <div className="rounded-[8px] md:rounded-[16px] overflow-hidden border-1 border-[#2D2D2D]">
-                        <img
-                        src="blindragScreenshots/2.png"
-                        className="w-full object-cover"
-                        />
-                    </div>
+                    </Zoom>
                     </SwiperSlide>
                 </Swiper>
 

@@ -70,12 +70,12 @@ export default function SameAIModels() {
                     delay: 10000,
                     disableOnInteraction: false
                 }}
-                className="!min-h-full mb-[24px] !overflow-visible"
+                className="!min-h-[140px] mb-[24px] !overflow-visible"
                 wrapperClass="!overflow-visible"
             >
                 {models.map((model, index) => (
-                    <SwiperSlide key={index}>
-                    <div key={index} className="min-w-[140px] min-h-[140px] flex flex-col justify-between items-start p-[24px] bg-white flex-1">
+                    <SwiperSlide key={index} className="!h-auto">
+                    <div key={index} className="min-w-[140px] !min-h-full flex flex-col justify-between items-start p-[24px] bg-white flex-1">
                         <div className="flex items-center justify-center w-[44px] h-[44px] overflow-hidden p-[2px] rounded-[12px] shadow-[0px_16px_32px_-4px_rgba(0,0,0,0.15)] border-1 border-[#EDE6DF] mb-3">
                             <img src={`models/${model}.png`} className="h-full w-full object-contain rounded-[12px] bg-white"/>
                         </div>

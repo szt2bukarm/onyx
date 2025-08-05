@@ -14,6 +14,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+import Testimonials from "@/components/common/Testimonials";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Page() {
@@ -26,17 +29,18 @@ export default function Page() {
 
     return (
     <>
-        <main className="w-full h-full bg-white">
+        <main className="w-full h-full bg-white overflow-x-hidden">
             <Head label="ONYX FORTRESS" subtext="Onyx Fortress is the first cloud API that keeps your data and queries fully blind to anyone outside of your organization - even to your cloud provider.">
                 <span>The most complete privacy in the world for your AI activity.</span>
                 <span className="text-onyx-500">Your cloud provider sees nothing.</span>
             </Head>
 
             <div className="flex flex-col gap-[80px] section-padding !overflow-visible">
+                <img src="fortress/fortress-flow.webp" className="w-full" />
                 <LargeTextBox label="WHAT IS FORTRESS">
                     <p className="mb-[40px]"><span className="text-onyx-500">Onyx Fortress</span> is end-to-end encryption of your AI activity, visible to no one but you.</p>
                     <br></br>
-                    <p>Powered by a breakthrough technology <b>Homomorphic Secret Sharing Equivariant Encryption (HSS-EE)</b>.</p>
+                    <p>Powered by a breakthrough technology <b>Homomorphic Secret Sharing Equivariant Encryption (HSS-EE)</b></p>
                 </LargeTextBox>
                 <Swiper
                     modules={[Navigation]}
@@ -56,23 +60,29 @@ export default function Page() {
                     wrapperClass="!overflow-visible"
                     >
                     <SwiperSlide>
-                        <div className="rounded-[8px] md:rounded-[16px] overflow-hidden">
-                            <img
-                            src="fortressScreenshots/1.png"
-                            className="w-full object-cover"
-                            />
-                        </div>
+                        <Zoom classDialog='custom-zoom'>
+                            <div className="rounded-[8px] md:rounded-[16px] overflow-hidden">
+                                <img
+                                src="fortress/fortressScreenshots/1.png"
+                                className="w-full object-cover"
+                                />
+                            </div>
+                        </Zoom>
                       </SwiperSlide>
                     <SwiperSlide>
-                    <div className="rounded-[8px] md:rounded-[16px] overflow-hidden">
-                        <img
-                        src="fortressScreenshots/2.png"
-                        className="w-full object-cover"
-                        />
-                    </div>
+                        <Zoom classDialog='custom-zoom'>
+                            <div className="rounded-[8px] md:rounded-[16px] overflow-hidden">
+                                <img
+                                src="fortress/fortressScreenshots/2.png"
+                                className="w-full object-cover"
+                                />
+                            </div>
+                        </Zoom>
                     </SwiperSlide>
                 </Swiper>
             </div>
+
+            <div className="section-padding sm:!pt-[80px]"><Testimonials color="white" /></div>
 
             <Latency />
 

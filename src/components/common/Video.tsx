@@ -11,11 +11,11 @@ export default function Video({name,role,video,showWatchVideo,buttonColor,button
             {children}
             <div className={`w-full flex justify-between mt-auto ${showWatchVideo ? 'items-center' : 'items-end'}`}>
                 <div className="flex items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0 md:top-0 md:left-0 md:relative">
-                    <div className="mr-0 md:mr-[24px]">
+                    <div className="mr-[24px]">
                         <PlayVideoButton size={buttonSize} color={buttonColor} />
                     </div>
                     {showWatchVideo && 
-                        <p className="hidden md:block font-regular text-white text-h5 leading-h5 mr-[24px]">Watch video</p>
+                        <p className="block font-regular text-white text-h5 leading-h5 md:mr-[24px]">Watch video</p>
                     }
                 </div>
                 <div className="flex items-center gap-[16px]">

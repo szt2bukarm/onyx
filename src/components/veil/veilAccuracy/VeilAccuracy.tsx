@@ -11,7 +11,7 @@ export default function VeilAccuracy() {
                 <Heading className="font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[16px]">Get the exact same accuracy of response</Heading>
                 <p className="font-regular text-lg leading-lg text-neutral-700">Veil ensures that responses remain accurate without any critical data leaks by transforming and then mapping back tokens in the prompt.</p>
                 </div>
-                <img src="veil/veilFlow.png" className="w-full" />
+                <img src="veil/veilFlow.webp" className="w-full" />
             </div>
 
             {/* exact same accuracy */}

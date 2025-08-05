@@ -6,7 +6,7 @@ import Hero from "@/components/landing/hero/Hero";
 import Highlights from "@/components/landing/highlights/Highlights";
 import Privacy from "@/components/landing/privacy/Privacy";
 import Saygoodbye from "@/components/landing/saygoodbye/Saygoodbye";
-import Testiomonials from "@/components/landing/testimonials/Testimonials";
+import Testiomonials from "@/components/common/Testimonials";
 import TrustedBy from "@/components/landing/trustedby/TrustedBy";
 import ZeroSwitch from "@/components/landing/zeroswitch/ZeroSwitch";
 import Image from "next/image";
@@ -29,7 +29,7 @@ export default function Home() {
         <Encrypt />
         <Privacy />
         <Explore />
-        <Testiomonials />
+        <div className="section-padding"><Testiomonials color="black" /></div>
       </div>
 
     </main>

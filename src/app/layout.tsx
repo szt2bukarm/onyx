@@ -44,6 +44,7 @@ export default function RootLayout({
         crossOrigin="anonymous"
       />
       <body>
+      <script dangerouslySetInnerHTML={{ __html: `history.scrollRestoration = "manual"` }} />
         <Nav />
         <SmoothScroll>
           <div data-gsap="page">

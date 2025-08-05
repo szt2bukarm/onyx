@@ -4,11 +4,13 @@ import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import gsap from 'gsap'
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useLenis } from "@studio-freight/react-lenis";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function TransitionLink({ href,setNavOpen, children, className }) {
     const Router = useTransitionRouter();
     const pathname = usePathname();
+    const lenis = useLenis();
 
     const animation = () => {
             document.documentElement.animate([
@@ -31,7 +33,7 @@ export default function TransitionLink({ href,setNavOpen, children, className })
         
             document.documentElement.animate([
                 {
-                    transform: `translateY(${window.innerHeight * 1.5}px) scale(2)`,
+                    transform: `translateY(${window.innerHeight * 2}px) scale(2)`,
                     filter: "blur(5px)",
                 }
             ], {
@@ -42,7 +44,7 @@ export default function TransitionLink({ href,setNavOpen, children, className })
         
             document.documentElement.animate([
                 {
-                    transform: `translateY(${window.innerHeight * 1.5}px) scale(2)`,
+                    transform: `translateY(${window.innerHeight * 2}px) scale(2)`,
                     filter: "blur(5px)",
                 },
                 {
@@ -56,6 +58,13 @@ export default function TransitionLink({ href,setNavOpen, children, className })
                 pseudoElement: "::view-transition-new(root)",
                 delay: 300, 
             }); 
+            setTimeout(() => {
+                lenis?.stop();
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                    lenis?.start();
+                },1)
+            }, 100);
             setTimeout(() => {
                 ScrollTrigger.refresh();
             }, 1500);  
