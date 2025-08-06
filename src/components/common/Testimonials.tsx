@@ -92,11 +92,11 @@ export default function Testimonials({color = "white"}: {color: string}) {
             </div>
 
             <div className="flex justify-between">
-                <button className={`swiper-prev group cursor-pointer h-[36px] transition duration-150 w-fit flex items-center px-[16px] py-[8px] border ${color === 'black' ? "border-white/50 hover:bg-white" : "border-black hover:bg-black"}`}>
-                    <img src="arrow.svg" alt="arrow" className={`w-[27px] rotate-180 transition duration-150  ${color === 'black' ? "group-hover:invert" : "invert group-hover:invert-0"}`} />
+                <button className={`swiper-prev group cursor-pointer h-[36px] transition duration-150 w-fit flex items-center px-[16px] py-[8px] border ${color === 'black' ? "border-white/50 hover:bg-white active:bg-white" : "border-black hover:bg-black active:bg-black"}`}>
+                    <img src="arrow.svg" alt="arrow" className={`w-[27px] rotate-180 transition duration-150  ${color === 'black' ? "group-hover:invert group-active:invert" : "invert group-hover:invert-0 group-active:invert-0"}`} />
                 </button>
-                <button className={`swiper-next group cursor-pointer h-[36px] transition duration-150 w-fit flex items-center px-[16px] py-[8px] border ${color === 'black' ? "border-white/50 hover:bg-white" : "border-black hover:bg-black"}`}>
-                    <img src="arrow.svg" alt="arrow" className={`w-[27px] rotate-0 transition duration-150  ${color === 'black' ? "group-hover:invert" : "invert group-hover:invert-0"}`} />
+                <button className={`swiper-next group cursor-pointer h-[36px] transition duration-150 w-fit flex items-center px-[16px] py-[8px] border ${color === 'black' ? "border-white/50 hover:bg-white active:bg-white" : "border-black hover:bg-black active:bg-black"}`}>
+                    <img src="arrow.svg" alt="arrow" className={`w-[27px] rotate-0 transition duration-150  ${color === 'black' ? "group-hover:invert group-active:invert" : "invert group-hover:invert-0 group-active:invert-0"}`} />
                 </button>
                 </div>
         </div>

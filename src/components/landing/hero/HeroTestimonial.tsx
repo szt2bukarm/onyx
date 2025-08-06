@@ -36,7 +36,7 @@ export default function HeroTestimonial() {
 
     return (
         <div data-gsap="hero-testimonial">
-        <div className="hidden xl:grid xl:grid-cols-2 xl:grid-rows-2 xxl:w-[700px] xxl:h-[650px] xl:ml-auto">
+        <div className="hidden xl:grid xl:grid-cols-2 xl:grid-rows-2 xxl:w-[641px] xxl:h-[579px] translate-y-5">
             <div></div>
             {data.map((item,index) => (
                 <TestimonialCard key={index} transform={true} text={item.text} name={item.name} image={item.image} role={item.role} index={index} border theme="black"/>

@@ -24,7 +24,7 @@ export default function Home() {
       <Saygoodbye setStickyKey={setStickyKey}/>
 
       <div key={stickyKey}>
-        <Highlights />
+        <Highlights setStickyKey={setStickyKey}/>
         <ZeroSwitch />
         <Encrypt />
         <Privacy />

@@ -1,28 +1,46 @@
 import NavLink from "@/components/footer/NavLink"
 import TransitionLink from "@/components/TransitionLink"
 import Button from "../Button"
+import { useEffect, useRef } from "react";
 
 export default function NavMenuMobile({setOpen} : {setOpen: React.Dispatch<React.SetStateAction<boolean>>}) {
+    const navMenu = useRef<HTMLDivElement>(null);
+    const handleWheel = (e: WheelEvent) => {
+        e.stopPropagation();
+    };
+
+    useEffect(() => {
+        if (navMenu) {
+            navMenu.current.addEventListener("wheel", handleWheel, { passive: false });
+        }
+
+        return () => {
+            if (navMenu) {
+                navMenu.current.removeEventListener("wheel", handleWheel);
+            }
+        };
+    }, [setOpen]);
+    
     return (
-        <div className="relative flex flex-col lg:hidden overflow-y-auto max-h-[calc(100dvh-100px)] overscroll-contain">
+        <div ref={navMenu}   className="relative flex flex-col lg:hidden overflow-y-auto max-h-[calc(100dvh-100px)] overscroll-contain">
 
             {/* nav cards */}
             <div className="flex flex-col">
 
                 <TransitionLink href="/firewall" setNavOpen={setOpen}>
-                <div className="cursor-pointer transition duration-100 hover:bg-onyx-500 flex justify-between items-center p-[24px] border-1 border-[#B4B4B41F]">
+                <div className="cursor-pointer transition duration-100 hover:bg-onyx-500 active:bg-onyx-500 flex justify-between items-center p-[24px] border-1 border-[#B4B4B41F]">
                     <p className="text-regular text-h2 leading-h2 text-white mt-auto">Firewall</p>
                     <img src="arrow-up-right.svg" className="h-[60px] invert" />
                 </div>
                 </TransitionLink>
                 <TransitionLink href="/fortress" setNavOpen={setOpen}>
-                <div className="cursor-pointer transition duration-100 hover:bg-onyx-500 flex justify-between items-center p-[24px] border-1 border-[#B4B4B41F]">
+                <div className="cursor-pointer transition duration-100 hover:bg-onyx-500 active:bg-onyx-500 flex justify-between items-center p-[24px] border-1 border-[#B4B4B41F]">
                     <p className="text-regular text-h2 leading-h2 text-white mt-auto">Fortress</p>
                     <img src="arrow-up-right.svg" className="h-[60px] invert" />
                 </div>
                 </TransitionLink>
                 <TransitionLink href="/veil" setNavOpen={setOpen}>
-                <div className="cursor-pointer transition duration-100 hover:bg-onyx-500 flex justify-between items-center p-[24px] border-1 border-[#B4B4B41F]">
+                <div className="cursor-pointer transition duration-100 hover:bg-onyx-500 active:bg-onyx-500 flex justify-between items-center p-[24px] border-1 border-[#B4B4B41F]">
                     <p className="text-regular text-h2 leading-h2 text-white mt-auto">Veil</p>
                     <img src="arrow-up-right.svg" className="h-[60px] invert" />
                 </div>
@@ -68,7 +86,7 @@ export default function NavMenuMobile({setOpen} : {setOpen: React.Dispatch<React
             </div>
 
             <div className="p-[24px] w-full">
-                <Button variant="primary" center>TRY IT</Button>
+                <Button variant="primary" fitWidth={false} center>TRY IT</Button>
             </div>
 
         </div>

@@ -6,7 +6,7 @@ export default function SaygoodbyeText() {
     return (
         <div className="xxl:ml-[360px] xxl:mt-[160px]">
             <div className="flex flex-col xl:flex-row justify-center mb-[48px] md:mb-[100px] md:px-[20px] xl:justify-between items-start">
-                <Heading className="font-regular text-[40px] leading-[44px] md:text-h3 md:leading-h3 text-neutral-700 md:w-[600px] mb-5 xl:mb-0 xl:text-h2 xl:leading-h2 xl:px-0 ">Say goodbye to all of your costs for privacy.</Heading>
+                <Heading className="font-regular text-[40px] leading-[44px] md:text-h3 md:leading-h3 text-neutral-700 md:w-[600px] mb-5 xl:mb-0 xl:text-h2 xl:leading-h2 xl:px-0 ">Say goodbye to your costs for privacy</Heading>
                 <p className="font-regular text-lg leading-lg text-neutral-700 md:w-[400px]">Forget multi-million dollar on-prem infrastructure for AI privacy, get the exact same enterprise-level privacy guarantees in the first end-to-end encrypted API.</p>
             </div>
             <div className="flex flex-col xl:flex-row justify-center mb-[48px] md:mb-[64px] xl:justify-between">

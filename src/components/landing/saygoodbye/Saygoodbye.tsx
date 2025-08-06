@@ -64,7 +64,6 @@ export default function Saygoodbye({setStickyKey}: {setStickyKey: any}) {
         trigger: wrapperRef.current,
         start: "bottom bottom",
         end: "bottom bottom",
-        markers: true,
         onEnter: () => {
           setStickyKey(1);
         }

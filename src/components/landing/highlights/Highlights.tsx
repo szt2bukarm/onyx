@@ -8,22 +8,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
     {
-        icon: "iconplaceholder.png",
-        text: "Use your own data, fully private to anyone but you",
+        icon: "icons/circles.svg",
+        text: "Works with every major AI<br>model in the world",
         links: [
             {
-                linktext: "Connect your data seamlessly",
+                linktext: "See all models supported",
                 url: ""
             },
             {
-                linktext: "Query your data with AI easily",
+                linktext: "Process for custom trained models",
                 url: ""
             }
         ]
-    },
+    },    
     {
-        icon: "iconplaceholder.png",
-        text: "A blazing fast API, under 1 second speeds",
+        icon: "icons/timer.svg",
+        text: "A blazing fast API<br>under 1 second speeds",
         links: [
             {
                 linktext: "See how Onyx achieves this",
@@ -36,22 +36,22 @@ const cards = [
         ]
     },
     {
-        icon: "iconplaceholder.png",
-        text: "Works with every major AI model in the world",
+        icon: "icons/eye-lock.svg",
+        text: "Your data stays fully private<br>to anyone but you",
         links: [
             {
-                linktext: "See all models supported",
+                linktext: "Connect your data seamlessly",
                 url: ""
             },
             {
-                linktext: "Process for custom trained models",
+                linktext: "Query your data with AI easily",
                 url: ""
             }
         ]
-    },    
+    },
 ]
 
-export default function Highlights() {
+export default function Highlights({setStickyKey}: {setStickyKey: any}) {
     useGSAP(() => {
         gsap.set("[data-gsap='highlight-line-1']", {height: 0})
         gsap.set("[data-gsap='highlight-line-2']", {width: 0})
@@ -62,11 +62,21 @@ export default function Highlights() {
             onEnter: () => {
                 gsap.to("[data-gsap='highlight-line-1']", {height: "50%", duration: 1, ease: "out"})
                 gsap.to("[data-gsap='highlight-line-2']", {width: "200%", duration: 1, ease: "out"})
-            }
+            },
+        })
+
+        let stickyKeyTrigger = ScrollTrigger.create({
+            trigger: "[data-gsap='highlight']",
+            start: "bottom top",
+            once: true,
+            onEnter: () => {
+                setStickyKey(2)
+            },
         })
 
         const handleResize = () => {
             trigger.refresh();
+            stickyKeyTrigger.refresh();
         }
 
         window.addEventListener("resize", handleResize);

@@ -495,7 +495,7 @@ export default function Page() {
 
                 <div className="grid xl:grid-cols-[auto_1fr] gap-[40px] xl:gap-[80px] pb-[48px] sm:pb-[120px]">
                     {/* Sticky sidebar */}
-                    <div className="z-10 flex xl:flex-col overflow-x-auto xl:flex-wrap gap-[6px] h-min sticky top-[85px] lg:top-[95px] py-[20px] xl:p-0 bg-white xl:bg-transparent xl:top-[120px]">
+                    <div className="show-scrollbar z-10 flex xl:flex-col overflow-x-auto xl:flex-wrap gap-[6px] h-min sticky top-[85px] lg:top-[95px] py-[20px] xl:p-0 bg-white xl:bg-transparent xl:top-[120px]">
                         {tags.map((tag, index) => (
                             <div 
                                 key={index} 

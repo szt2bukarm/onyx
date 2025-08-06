@@ -22,10 +22,14 @@ html {
 }
 
 ::-webkit-scrollbar {
-  display: block;
+  display: none;
   background-color: #000;
   width: 8px;
   height: 8px;
+}
+
+.show-scrollbar::-webkit-scrollbar {
+  display: block;
 }
 
 ::-webkit-scrollbar-thumb {

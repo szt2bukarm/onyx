@@ -10,7 +10,7 @@ export default function Encrypt() {
         <div className="min-w-full bg-creambg section-padding">
             <div className="flex flex-col lg:flex-row justify-between gap-[32px] lg:gap-[64px]">
                 <div className="w-full lg:w-[840px] h-full">
-                    <Heading className="font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[24px]">Understanding the breakthrough technology behind Onyx, Equivariant Encryption (EE).</Heading>
+                    <Heading className="font-regular text-mobileheading leading-mobileheading sm:text-h3 sm:leading-h3 xl:text-h2 xl:leading-h2 text-neutral-800 mb-[24px]">Understanding the breakthrough technology behind Onyx: <b>Equivariant Encryption (EE).</b></Heading>
                     <p className="font-regular text-lg leading-lg text-neutral-800">EE is a unique fusion of Homomorphic Encryption and MPC Privacy.</p>
                 </div>
                 <div className="w-full md:max-w-[680px] flex flex-col">

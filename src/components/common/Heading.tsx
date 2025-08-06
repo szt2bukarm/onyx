@@ -31,7 +31,7 @@ export default function Heading({className,children}: {className: string, childr
             onEnter: () => {
                 gsap.to(
                     [split.words],
-                    { y: 0, duration: 1, stagger: 0.05, ease: "out" }
+                    { y: 0, duration: 1, stagger: 0.035, ease: "out" }
                 );
             }
         })

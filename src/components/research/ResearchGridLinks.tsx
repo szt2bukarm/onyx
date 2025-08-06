@@ -167,7 +167,7 @@ export default function ResearchGridLinks({selectedTag,setSelectedTag} : {any}) 
         <div className=" lg:px-[80px] pt-[48px] pb-[48px] sm:pb-[120px]">
 
             {/* tabs */}
-            <div className="z-10 px-[20px] flex overflow-x-auto flex-wrap gap-[6px] h-min sticky top-[85px] lg:top-[95px] py-[20px] bg-white xl:top-[95px] mb-[32px]">
+            <div className="show-scrollbar z-10 px-[20px] flex overflow-x-auto flex-wrap gap-[6px] h-min sticky top-[85px] lg:top-[95px] py-[20px] bg-white xl:top-[95px] mb-[32px]">
                 {tags.map((tag, index) => (
                     <div 
                         key={index} 

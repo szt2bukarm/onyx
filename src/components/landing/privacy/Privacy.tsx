@@ -7,13 +7,13 @@ import Heading from "../../common/Heading";
 
 const cards = [
     {
-        header: "Onyx Fortress",
+        header: "Onyx Firewall",
         subheader: "If you trust your cloud provider",
         text: "Full privacy protection from any third party, internal and external. Near zero latency.",
         button: "EE"
     },
     {
-        header: "Onyx Cloud Wall",
+        header: "Onyx Fortress",
         subheader: "If you don’t trust your cloud provider",
         text: "Full privacy protection from everyone, even your cloud provider. Minor latency.",
         button: "HSS-EE"
